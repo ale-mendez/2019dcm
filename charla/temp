@@ -1,0 +1,48 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Depuraci\'on}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Depuraci\'on}
+
+\vspace{-0.65cm}
+%\begin{tcolorbox}[colframe=darkgray,top=-10pt,left=0pt,
+%right=0pt,bottom=3pt]
+\begin{equation*}
+ Z(r) = \sum_{j} \alpha_j e^{-\beta_j r} +1 = \Bigg\{
+ \begin{array}{cl}
+  Z_N &:\, r=0 \\ 
+  1   &:\, r\rightarrow \infty\\
+ \end{array}
+\end{equation*}
+%\end{tcolorbox}
+\begin{center}
+\begin{tikzpicture}
+  \node (img1) 
+  {\includegraphics[width=0.6\textwidth]{figures/theory/depuration2sKr-a.pdf}};
+\end{tikzpicture}
+\end{center}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Depuraci\'on}
+
+%\begin{tcolorbox}[colframe=darkgray,top=-10pt,left=0pt,
+%right=0pt,bottom=3pt]
+\begin{equation*}
+ Z(r) = \sum_{j} \alpha_j e^{-\beta_j r} +1 = \Bigg\{
+ \begin{array}{cl}
+  Z_N &:\, r=0 \\ 
+  1   &:\, r\rightarrow \infty\\
+ \end{array}
+\end{equation*}
+%\end{tcolorbox}
+
+\begin{center}
+\begin{tikzpicture}
+  \node (img1) 
+  {\includegraphics[width=0.5\textwidth]{figures/theory/depuration2sKr.pdf}};
+\end{tikzpicture}
+\end{center}
+
+\end{frame}

@@ -1,0 +1,184 @@
+\ProvidesPackage{presento}
+\mode<presentation>
+
+% packages
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{amsmath,amssymb}
+\usepackage{verbatim}
+\usepackage{animate}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[listings,theorems]{tcolorbox}
+\usepackage{varwidth}
+\usepackage[export]{adjustbox}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor,pict2e}% to allow any radius
+\usepackage{pgf}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage[customcolors,shade]{hf-tikz}
+
+\usetikzlibrary{positioning,shapes}
+\usetikzlibrary{shapes.geometric,arrows,automata,tikzmark}
+\usetikzlibrary{arrows,decorations.pathmorphing}
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+% navigation bar
+\useoutertheme{miniframes}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{section in head/foot shaded}{%
+  \color{gray}\usebeamertemplate{section in head/foot}}
+\setbeamertemplate{headline}{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertsectionnavigationhorizontal{\paperwidth}{}{}\vskip2pt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+}
+
+% colors
+\definecolor{colororange}{HTML}{E65100} % orange
+\definecolor{colordgray}{HTML}{795548} % dark gray for note
+\definecolor{colorhgray}{HTML}{212121} % heavy dark gray for normal text
+\definecolor{colorgreen}{HTML}{009688} % green
+\definecolor{colorlgray}{HTML}{FAFAFA} % background light gray
+\definecolor{colorblue}{HTML}{0277BB} % blue
+
+% define new colors
+\definecolor{orange0}{RGB}{255,190,0}
+\definecolor{green0}{RGB}{200,255,0}
+\definecolor{ao(english)}{rgb}{0.0, 0.5, 0.0}
+\definecolor{forestgreen(web)}{rgb}{0.13, 0.55, 0.13}
+\definecolor{babyblueeyes}{rgb}{0.63, 0.79, 0.95}
+\definecolor{lightgray}{rgb}{0.83, 0.83, 0.83}
+\definecolor{dimgray}{rgb}{0.41, 0.41, 0.41}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{orange(colorwheel)}{rgb}{1.0, 0.5, 0.0}
+\definecolor{orange-red}{rgb}{1.0, 0.27, 0.0}
+
+\definecolor{DarkFern}{HTML}{407428}
+\definecolor{DarkCharcoal}{HTML}{4D4944}
+\colorlet{Fern}{DarkFern!85!white}
+\colorlet{Charcoal}{DarkCharcoal!85!white}
+\colorlet{LightCharcoal}{Charcoal!50!white}
+\colorlet{AlertColor}{orange!80!black}
+\colorlet{DarkRed}{red!70!black}
+\colorlet{DarkBlue}{blue!70!black}
+\colorlet{DarkGreen}{green!70!black}
+
+% font sizes
+\newcommand{\fontsizeone}{2.292em}
+\newcommand{\fontsizetwo}{1.217em}
+\newcommand{\fontsizethree}{0.875em}
+% line spaces
+\newcommand{\linespaceone}{2}
+
+% font families
+%\newfontfamily{\montserratfont}[Path=fonts/,BoldFont=Montserrat-Bold]{Montserrat-Regular}
+%\newfontfamily{\notosansfont}[Path=fonts/,BoldFont=NotoSans-Bold,ItalicFont=NotoSans-Italic,BoldItalicFont=NotoSans-BoldItalic,SmallCapsFont=AlegreyaSansSC-Regular]{NotoSans-Regular}
+%\newfontfamily{\latolightfont}[Path=fonts/]{Lato-Lig}
+%\newfontfamily{\inconsolatafont}[Path=fonts/]{Inconsolata}
+
+% beamer template changes
+\setbeamertemplate{frametitle}{
+ \vspace{0.40em}
+ \noindent
+ \hspace{-1.22em}
+ \tikz[overlay,remember picture,baseline=0.3em]{
+       \fill[fill=green0](-0.3,0.05) rectangle (0,0.9);}
+       \color{applegreen}~~\insertframetitle%
+}
+
+%\setmainfont[Ligatures=TeX,Path=fonts/,BoldFont=NotoSans-Bold,ItalicFont=NotoSans-Italic,BoldItalicFont=NotoSans-BoldItalic,SmallCapsFont=AlegreyaSansSC-Regular]{NotoSans-Regular}
+%\setsansfont[Ligatures=TeX,Path=fonts/,BoldFont=NotoSans-Bold,ItalicFont=NotoSans-Italic,BoldItalicFont=NotoSans-BoldItalic,SmallCapsFont=AlegreyaSansSC-Regular]{NotoSans-Regular}
+%\setmonofont[Ligatures=TeX,Path=fonts/,SmallCapsFont=AlegreyaSansSC-Regular]{Inconsolata}
+
+% frame counter
+\newcounter{totalfr}
+\setbeamertemplate{footline}{
+  \ifnum\inserttotalframenumber=1
+    \setcounter{totalfr}{2}
+  \else
+     \setcounter{totalfr}{\inserttotalframenumber}
+  \fi
+  \hfill{
+    \tikz{
+      \filldraw[fill=colorblue!40, draw=colorblue!50]  (0,0) -- (0.2,0) arc (0:{\value{framenumber}*(360/(\value{totalfr}-1))}:0.2) -- (0,0);
+      \node at (0,0) {\normalsize \color{colororange}\tiny{\insertframenumber}};
+    }
+  }
+  \hspace{2em}
+  \vspace*{1em}
+}
+
+% custom commands
+\newcommand{\hugetext}[1]{
+  {
+  \begin{spacing}{\linespaceone}
+   \fontsize{\fontsizeone}{\fontsizeone}{ #1}
+  \end{spacing}
+  }
+}
+
+\newcommand{\largetext}[1]{
+ {\fontsize{\fontsizetwo}{\fontsizeone}\selectfont{#1}}
+}
+
+\newcommand{\setnote}[1]{
+ {\fontsize{\fontsizethree}{\fontsizeone}\selectfont\color{colordgray}{#1}}
+}
+
+\newcommand{\rtarrow}{$\color{colorblue}{\rightarrow}$}
+
+\newcommand{\itemR}{
+ \item[\rtarrow]
+}
+
+\newcommand{\framecard}[2][colorgreen]{
+  {\setbeamercolor{background canvas}{bg=#1}
+    \begin{frame}[plain]
+    \vfill
+    \begin{center}
+     {#2}
+    \end{center}
+    \vfill
+    \end{frame}
+  }
+}
+\newcommand{\framepic}[3][1]{
+  {
+    \usebackgroundtemplate{%
+    \tikz[overlay,remember picture]
+      \node[opacity=#1, at=(current page.center)]{
+      \includegraphics[height=1.0\paperheight]{#2}};
+    }
+    \begin{frame}
+    #3
+    \end{frame}
+  }
+}
+
+\newenvironment{baseitemize}
+  {\itemize[leftmargin=*]}
+  {\enditemize}
+
+\newenvironment{fullpageitemize}
+  {\itemize[nolistsep,itemsep=\fill,leftmargin=*]}
+  {\vfill\enditemize}
+
+
+% custom packages
+\usepackage{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\newcommand\crule[1][black]{\textcolor{#1}{\rule{2cm}{2cm}}}
+
