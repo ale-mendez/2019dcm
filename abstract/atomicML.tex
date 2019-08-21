@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+% This is the LaTeX sample. If you use this sample you automatically get 
+%the correct formatting of your Abstract.
+\voffset=0.0cm
+\hoffset=0.0cm
+\topskip=0cm
+\topmargin=-2.0cm
+\oddsidemargin=-0.5cm
+\evensidemargin=-0.5cm
+\textwidth=16.75cm \textheight=25.0cm
+\renewcommand\refname{\small References}
+\renewcommand\baselinestretch{1}
+\pagestyle{empty}
+\newcommand{\abstracttitle}[1]{\begin{center}#1\end{center}}
+\newcommand{\authors}[1]{\vspace*{-0.3cm}\begin{center}#1\end{center}\vspace*{-0.3cm}}
+\newcommand{\addresses}[1]{\begin{center}#1\end{center}}
+\newcommand{\abstracttext}[1]{\vspace{0.5cm}\columnsep0.75cm \begin{multicols}{2} #1 \end{multicols}}
+% Use \picturelportrait{0} when you want to include a portrait figure!
+\newcommand{\pictureportrait}[2]{\vspace{0.5cm}\centerline{\includegraphics*[width=7.8cm,height=9cm,angle=#1]{#2}}}
+% Use \picturelandscape{0} when you want to include a landscape figure!
+\newcommand{\picturelandscape}[2]{\vspace{0.5cm}\centerline{\includegraphics*[width=7.8cm,height=5.5cm,angle=#1]{#2}}}
+\newcommand{\capt}[2]{\vspace*{-0.1cm}\begin{center} \begin{minipage}[t]{7.0cm} Fig. #1. #2 \end{minipage}\end{center}\vspace*{0.3cm}}
+\newcommand{\captTab}[2]{\vspace*{-0.1cm}\begin{center} \begin{minipage}[t]{7.0cm} Tab. #1. #2 \end{minipage}\end{center}\vspace*{-0.1cm}}
+
+
+\begin{document}
+
+
+\abstracttitle{IMPLEMENTACIÓN DE MÉTODOS DE APRENDIZAJE AUTOMATIZADO
+\\ EN PROBLEMAS COLISIONALES}
+
+\authors{
+A M P Mendez$^\ast$,
+J I Di Filippo$^\dag$,
+S D López$^\ast$
+and D M Mitnik$^{\ast,\dag}$ 
+}
+
+% \abstracttitle{}%end \abstracttitle
+% \authors{
+
+
+\addresses{
+$^\ast$Instituto de Astronom\'ia y F\'isica del Espacio, Consejo 
+Nacional de Investigaciones Cient\'ificas y T\'ecnicas and 
+Universidad de Buenos Aires, Buenos Aires, Argentina \\
+$^\dag$Departamento de F\'isica, Universidad de Buenos Aires, 
+Buenos Aires, Argentina
+}
+
+
+\abstracttext{
+Las herramientas desarrolladas en el campo del {\it machine
+learning} resultan de gran aplicabilidad en problemas de 
+la física que exigen constante intervención humana. 
+En el presente reporte mostramos algunos ejemplos de 
+dicha implementación en la física de colisiones. 
+En particular, utilizamos herramientas de aprendizaje automatizado 
+para describir con precisión blancos atómicos en procesos
+colisionales.
+
+Los cálculos de transiciones inelásticas requieren la 
+representación de los estados ligados y continuos involucrados. 
+En principio, la existencia de un potencial efectivo 
+que describa dichos estados permitiría obtener de forma directa 
+las funciones de onda de las partículas interactuantes.
+El método de inversión depurada (DIM)~\cite{Mendez:16} permite
+la obtención de potenciales efectivos orbitales atómicos y
+moleculares. El método consiste en la inversión directa de 
+ecuaciones de tipo Kohn--Sham, cuyas soluciones están dadas 
+por las ecuaciones de Hartree--Fock. El potencial resultante,
+plagado de polos y/o divergencias, es ajustado a través de una
+expresión analítica paramétrica de manera tal que las energías
+y valores medios originales son reproducidos con gran precisión. 
+Sin embargo, el ajuste del potencial y optimización de los
+parámetros es un proceso ``artesanal'' que demanda recursos 
+humanos. 
+% La inclusión de métodos automatizados en dicha técnica significa 
+% una notable mejoría en el método, reduciendo drásticamente los
+% niveles de intervención humana y proporcionando incluso mejores
+% resultados en los ajustes analíticos.
+
+Por otro lado, métodos sotisticados tales como la expansión 
+de {\em close-cloupling} requieren una descripción precisa del 
+blanco~\cite{Bartschat:04,Zatsarinny:16}. 
+Sin embargo, la determinación de una estructura 
+atómica adecuada a menudo requiere experiencia y recursos 
+computacionales significativos. En general, la función de onda del 
+blanco se expresa 
+mediante el método de {\em configuration interaction} (CI). Además,
+la parte radial de las funciones de onda de un electrón se puede 
+obtener con potenciales modelo que contienen parámetros de 
+escaleo~\cite{Badnell:11}.
+La precisión de la estructura se puede mejorar aumentando el número 
+de configuraciones en el CI, lo que a su vez aumenta el número de
+parámetros que se pueden variar. Sin embargo, no existe una receta
+sistemática ni lógica para este procedimiento. 
+% Hemos demostrado que la implementación de métodos de aprendizaje
+% automatizado en este tipo de problemas reduce significativamente 
+% el costo de cálculo en la mayoría de los casos, lo cual resulta 
+% determinante en iones de centenas de niveles.
+
+La inclusión de herramientas de aprendizaje automatizado en la 
+optimización de potenciales y funciones de onda constituye una 
+mejora significativa en ambos métodos. A partir de su 
+implementación, hemos logrado reducir drásticamente los niveles 
+de intervención y recursos humanos, proporcionando incluso 
+mejores resultados.
+
+
+
+\begin{thebibliography}{99}
+\bibitem{Mendez:16} 
+A.M.P. Mendez, D.M. Mitnik, and J.E. Miraglia, 
+Int. J. Quant. Chem. {\bf 116}, 1882 (2016); 
+Advances in Quantum Chemistry \textit{accepted} (2019).
+
+\bibitem{Bartschat:04} 
+Bartschat, K {\em et al} J. Phys. B {\bf 37} 2617 (2004).
+
+\bibitem{Zatsarinny:16}
+Zatsarinny, O {\em et al} 
+J. Phys. B {\bf 49} 235701 (2016).
+
+\bibitem{Badnell:11}
+Badnell, N R 
+Comput. Phys. Commun. {\bf 7} 1528 (2011).
+
+\end{thebibliography}
+
+% \noindent
+% [5] The GPyOpt authors 2016 \url{http://github.com/SheffieldML/GPyOpt} 
+% 
+% \noindent
+% [6] J\"onsson, P {\em et al} 1999 {\em J. Phys. B} {\bf 32} 1233 
+% 
+% \noindent
+% [7] Kramida, A {\em et al} NIST Atomic Spectra Database (version 5.6.1)  
+
+}%\abstracttext
+
+% end of the body
+\end{document}
