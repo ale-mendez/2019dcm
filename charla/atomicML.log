@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.19)  21 AUG 2019 17:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.8.19)  21 AUG 2019 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1776,7 +1776,7 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <27> not available
 (Font)              size <24.88> substituted on input line 66.
 
-<iafe.jpg, id=41, 301.125pt x 301.125pt>
+<iafe.jpg, id=46, 301.125pt x 301.125pt>
 File: iafe.jpg Graphic file (type jpg)
 <use iafe.jpg>
 Package pdftex.def Info: iafe.jpg  used on input line 66.
@@ -1784,7 +1784,7 @@ Package pdftex.def Info: iafe.jpg  used on input line 66.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./iafe.jpg>]
-<figures/mlcover_modif.png, id=51, 915.42pt x 622.325pt>
+<figures/mlcover_modif.png, id=56, 915.42pt x 622.325pt>
 File: figures/mlcover_modif.png Graphic file (type png)
 <use figures/mlcover_modif.png>
 Package pdftex.def Info: figures/mlcover_modif.png  used on input line 76.
@@ -1792,7 +1792,7 @@ Package pdftex.def Info: figures/mlcover_modif.png  used on input line 76.
  [2
 
  <./figures/mlcover_modif.png (PNG copy)>]
-<figures/ionization.png, id=65, 867.24pt x 650.43pt>
+<figures/ionization.png, id=72, 867.24pt x 650.43pt>
 File: figures/ionization.png Graphic file (type png)
 <use figures/ionization.png>
 Package pdftex.def Info: figures/ionization.png  used on input line 78.
@@ -1811,30 +1811,15 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 114.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (3.45384pt too wide) in alignment at lines 114--114
- [][][] []
- []
-
-[4
+ [4
 
 ]
 Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (3.45384pt too wide) in alignment at lines 114--114
- [][][] []
- []
-
-[5
+ [5
 
 ]
 Missing character: There is no ; in font nullfont!
-
-Overfull \hbox (3.45384pt too wide) in alignment at lines 114--114
- [][][] []
- []
-
-[6
+ [6
 
 ]
 Missing character: There is no ; in font nullfont!
@@ -1842,34 +1827,35 @@ Missing character: There is no ; in font nullfont!
 
 ]
 Missing character: There is no ; in font nullfont!
- [8
+
+[8
 
 ]
-<figures/dim/wavefun2sKr.pdf, id=128, 680.5425pt x 333.245pt>
+<figures/dim/wavefun2sKr.pdf, id=143, 680.5425pt x 333.245pt>
 File: figures/dim/wavefun2sKr.pdf Graphic file (type pdf)
 <use figures/dim/wavefun2sKr.pdf>
-Package pdftex.def Info: figures/dim/wavefun2sKr.pdf  used on input line 165.
+Package pdftex.def Info: figures/dim/wavefun2sKr.pdf  used on input line 133.
 (pdftex.def)             Requested size: 291.92444pt x 142.94678pt.
  [9
 
  <./figures/dim/wavefun2sKr.pdf>]
 File: figures/dim/wavefun2sKr.pdf Graphic file (type pdf)
 <use figures/dim/wavefun2sKr.pdf>
-Package pdftex.def Info: figures/dim/wavefun2sKr.pdf  used on input line 165.
+Package pdftex.def Info: figures/dim/wavefun2sKr.pdf  used on input line 133.
 (pdftex.def)             Requested size: 291.92444pt x 142.94678pt.
-<figures/dim/problem1-2sKr.pdf, id=145, 385.44pt x 350.30875pt>
+<figures/dim/problem1-2sKr.pdf, id=159, 385.44pt x 350.30875pt>
 File: figures/dim/problem1-2sKr.pdf Graphic file (type pdf)
 <use figures/dim/problem1-2sKr.pdf>
-Package pdftex.def Info: figures/dim/problem1-2sKr.pdf  used on input line 165.
+Package pdftex.def Info: figures/dim/problem1-2sKr.pdf  used on input line 133.
 
 (pdftex.def)             Requested size: 122.91406pt x 111.71088pt.
 
-Overfull \hbox (3.48439pt too wide) in paragraph at lines 165--165
+Overfull \hbox (3.48439pt too wide) in paragraph at lines 133--133
 [][]  
  []
 
 
-Overfull \vbox (6.11102pt too high) detected at line 165
+Overfull \vbox (6.11102pt too high) detected at line 133
  []
 
 [10
@@ -1877,26 +1863,26 @@ Overfull \vbox (6.11102pt too high) detected at line 165
  <./figures/dim/problem1-2sKr.pdf>]
 File: figures/dim/wavefun2sKr.pdf Graphic file (type pdf)
 <use figures/dim/wavefun2sKr.pdf>
-Package pdftex.def Info: figures/dim/wavefun2sKr.pdf  used on input line 165.
+Package pdftex.def Info: figures/dim/wavefun2sKr.pdf  used on input line 133.
 (pdftex.def)             Requested size: 291.92444pt x 142.94678pt.
 File: figures/dim/problem1-2sKr.pdf Graphic file (type pdf)
 <use figures/dim/problem1-2sKr.pdf>
-Package pdftex.def Info: figures/dim/problem1-2sKr.pdf  used on input line 165.
+Package pdftex.def Info: figures/dim/problem1-2sKr.pdf  used on input line 133.
 
 (pdftex.def)             Requested size: 122.91406pt x 111.71088pt.
-<figures/dim/problem2-2sKr.pdf, id=160, 385.44pt x 350.30875pt>
+<figures/dim/problem2-2sKr.pdf, id=176, 385.44pt x 350.30875pt>
 File: figures/dim/problem2-2sKr.pdf Graphic file (type pdf)
 <use figures/dim/problem2-2sKr.pdf>
-Package pdftex.def Info: figures/dim/problem2-2sKr.pdf  used on input line 165.
+Package pdftex.def Info: figures/dim/problem2-2sKr.pdf  used on input line 133.
 
 (pdftex.def)             Requested size: 122.91406pt x 111.71088pt.
 
-Overfull \hbox (20.04854pt too wide) in paragraph at lines 165--165
+Overfull \hbox (20.04854pt too wide) in paragraph at lines 133--133
 [][]  
  []
 
 
-Overfull \vbox (6.11102pt too high) detected at line 165
+Overfull \vbox (6.11102pt too high) detected at line 133
  []
 
 [11
@@ -1911,18 +1897,18 @@ to.pdf>
 (epstopdf)                    size: 7415 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dim/depuration2sN-
 a-eps-converted-to.pdf figures/dim/depuration2sN-a.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figures/dim/depuration2sN-a-eps-converted-to.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/dim/depuration2sN-a-eps-converted-to.pdf, id=176, 542.025pt x 375.4025
+<figures/dim/depuration2sN-a-eps-converted-to.pdf, id=192, 542.025pt x 375.4025
 pt>
 File: figures/dim/depuration2sN-a-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/dim/depuration2sN-a-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dim/depuration2sN-a-eps-converted-to.pdf  used
- on input line 195.
+ on input line 161.
 (pdftex.def)             Requested size: 215.10196pt x 148.97833pt.
 [12
 
@@ -1936,12 +1922,12 @@ to.pdf>
 (epstopdf)                    size: 7415 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dim/depuration2sN-
 a-eps-converted-to.pdf figures/dim/depuration2sN-a.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/dim/depuration2sN-a-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/dim/depuration2sN-a-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dim/depuration2sN-a-eps-converted-to.pdf  used
- on input line 195.
+ on input line 161.
 (pdftex.def)             Requested size: 215.10196pt x 148.97833pt.
  [13
 
@@ -1955,12 +1941,12 @@ to.pdf>
 (epstopdf)                    size: 7415 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dim/depuration2sN-
 a-eps-converted-to.pdf figures/dim/depuration2sN-a.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/dim/depuration2sN-a-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/dim/depuration2sN-a-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dim/depuration2sN-a-eps-converted-to.pdf  used
- on input line 195.
+ on input line 161.
 (pdftex.def)             Requested size: 215.10196pt x 148.97833pt.
 Missing character: There is no ; in font nullfont!
 Package epstopdf Info: Source file: <figures/dim/depuration2sN-b.eps>
@@ -1972,18 +1958,18 @@ to.pdf>
 (epstopdf)                    size: 10501 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dim/depuration2sN-
 b-eps-converted-to.pdf figures/dim/depuration2sN-b.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figures/dim/depuration2sN-b-eps-converted-to.p
 df): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/dim/depuration2sN-b-eps-converted-to.pdf, id=201, 543.02875pt x 375.40
+<figures/dim/depuration2sN-b-eps-converted-to.pdf, id=219, 543.02875pt x 375.40
 25pt>
 File: figures/dim/depuration2sN-b-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/dim/depuration2sN-b-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dim/depuration2sN-b-eps-converted-to.pdf  used
- on input line 195.
+ on input line 161.
 (pdftex.def)             Requested size: 215.10196pt x 148.70338pt.
 [14
 
@@ -1997,12 +1983,12 @@ to.pdf>
 (epstopdf)                    size: 7415 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dim/depuration2sN-
 a-eps-converted-to.pdf figures/dim/depuration2sN-a.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/dim/depuration2sN-a-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/dim/depuration2sN-a-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dim/depuration2sN-a-eps-converted-to.pdf  used
- on input line 195.
+ on input line 161.
 (pdftex.def)             Requested size: 215.10196pt x 148.97833pt.
 Missing character: There is no ; in font nullfont!
 Package epstopdf Info: Source file: <figures/dim/depuration2sN-b.eps>
@@ -2014,29 +2000,33 @@ to.pdf>
 (epstopdf)                    size: 10501 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dim/depuration2sN-
 b-eps-converted-to.pdf figures/dim/depuration2sN-b.eps>
-(epstopdf)             \includegraphics on input line 195.
+(epstopdf)             \includegraphics on input line 161.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/dim/depuration2sN-b-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/dim/depuration2sN-b-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dim/depuration2sN-b-eps-converted-to.pdf  used
- on input line 195.
+ on input line 161.
 (pdftex.def)             Requested size: 215.10196pt x 148.70338pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
-(Font)              using `OT1/cmss/bx/n' instead on input line 195.
+(Font)              using `OT1/cmss/bx/n' instead on input line 161.
 
 Missing character: There is no ; in font nullfont!
 [15
 
 ]
-Overfull \hbox (3.45346pt too wide) in paragraph at lines 228--228
+Overfull \hbox (3.45346pt too wide) in paragraph at lines 194--194
  [][][][]\OT1/cmss/m/n/14.4 Diagonalizaci^^Son 
  []
 
 [16
 
 ] [17
+
+] [18
+
+] [19
 
 ]
 Package epstopdf Info: Source file: <figures/gp/lam1s_init2.eps>
@@ -2048,18 +2038,48 @@ f>
 (epstopdf)                    size: 123300 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/gp/lam1s_init2-eps
 -converted-to.pdf figures/gp/lam1s_init2.eps>
-(epstopdf)             \includegraphics on input line 247.
+(epstopdf)             \includegraphics on input line 238.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figures/gp/lam1s_init2-eps-converted-to.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<figures/gp/lam1s_init2-eps-converted-to.pdf, id=243, 433.62pt x 289.08pt>
+<figures/gp/lam1s_init2-eps-converted-to.pdf, id=287, 433.62pt x 289.08pt>
 File: figures/gp/lam1s_init2-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/gp/lam1s_init2-eps-converted-to.pdf>
 Package pdftex.def Info: figures/gp/lam1s_init2-eps-converted-to.pdf  used on i
-nput line 247.
+nput line 238.
 (pdftex.def)             Requested size: 276.559pt x 184.37979pt.
+[20
+
+ <./figures/gp/lam1s_init2-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/gp/lam1s_init2_maxevals1.eps>
+(epstopdf)                    date: 2019-08-20 11:12:07
+(epstopdf)                    size: 691853 bytes
+(epstopdf)             Output file: <figures/gp/lam1s_init2_maxevals1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 118305 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/gp/lam1s_init2_max
+evals1-eps-converted-to.pdf figures/gp/lam1s_init2_maxevals1.eps>
+(epstopdf)             \includegraphics on input line 238.
+Package epstopdf Info: Output file is already uptodate.
+
+
+pdfTeX warning: pdflatex (file ./figures/gp/lam1s_init2_maxevals1-eps-converted
+-to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
+owed
+<figures/gp/lam1s_init2_maxevals1-eps-converted-to.pdf, id=331, 433.62pt x 289.
+08pt>
+File: figures/gp/lam1s_init2_maxevals1-eps-converted-to.pdf Graphic file (type 
+pdf)
+<use figures/gp/lam1s_init2_maxevals1-eps-converted-to.pdf>
+Package pdftex.def Info: figures/gp/lam1s_init2_maxevals1-eps-converted-to.pdf 
+ used on input line 238.
+(pdftex.def)             Requested size: 276.559pt x 184.37979pt.
+[21
+
+ <./figures/gp/lam1s_init2_maxevals1-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/gp/lam1s_init2_maxevals2.eps>
 (epstopdf)                    date: 2019-08-20 11:12:08
 (epstopdf)                    size: 680689 bytes
@@ -2069,65 +2089,24 @@ rted-to.pdf>
 (epstopdf)                    size: 112279 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/gp/lam1s_init2_max
 evals2-eps-converted-to.pdf figures/gp/lam1s_init2_maxevals2.eps>
-(epstopdf)             \includegraphics on input line 247.
+(epstopdf)             \includegraphics on input line 238.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figures/gp/lam1s_init2_maxevals2-eps-converted
 -to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
 owed
-<figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf, id=244, 433.62pt x 289.
+<figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf, id=375, 433.62pt x 289.
 08pt>
 File: figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf Graphic file (type 
 pdf)
 <use figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf>
 Package pdftex.def Info: figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf 
- used on input line 247.
+ used on input line 238.
 (pdftex.def)             Requested size: 276.559pt x 184.37979pt.
-[18
+[22
 
- <./figures/gp/lam1s_init2-eps-converted-to.pdf> <./figures/gp/lam1s_init2_maxe
-vals2-eps-converted-to.pdf>]
-Package epstopdf Info: Source file: <figures/gp/lam1s_init2_maxevals2.eps>
-(epstopdf)                    date: 2019-08-20 11:12:08
-(epstopdf)                    size: 680689 bytes
-(epstopdf)             Output file: <figures/gp/lam1s_init2_maxevals2-eps-conve
-rted-to.pdf>
-(epstopdf)                    date: 2019-08-20 11:13:52
-(epstopdf)                    size: 112279 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/gp/lam1s_init2_max
-evals2-eps-converted-to.pdf figures/gp/lam1s_init2_maxevals2.eps>
-(epstopdf)             \includegraphics on input line 247.
-Package epstopdf Info: Output file is already uptodate.
-File: figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf Graphic file (type 
-pdf)
-<use figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf>
-Package pdftex.def Info: figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf 
- used on input line 247.
-(pdftex.def)             Requested size: 276.559pt x 184.37979pt.
- [19
-
-]
-Package epstopdf Info: Source file: <figures/gp/lam1s_init2_maxevals2.eps>
-(epstopdf)                    date: 2019-08-20 11:12:08
-(epstopdf)                    size: 680689 bytes
-(epstopdf)             Output file: <figures/gp/lam1s_init2_maxevals2-eps-conve
-rted-to.pdf>
-(epstopdf)                    date: 2019-08-20 11:13:52
-(epstopdf)                    size: 112279 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/gp/lam1s_init2_max
-evals2-eps-converted-to.pdf figures/gp/lam1s_init2_maxevals2.eps>
-(epstopdf)             \includegraphics on input line 247.
-Package epstopdf Info: Output file is already uptodate.
-File: figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf Graphic file (type 
-pdf)
-<use figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf>
-Package pdftex.def Info: figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf 
- used on input line 247.
-(pdftex.def)             Requested size: 276.559pt x 184.37979pt.
- [20
-
-]
+ <./figures/gp/lam1s_init2_maxevals2-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/gp/lam1s_init2_maxevals3.eps>
 (epstopdf)                    date: 2019-08-20 11:12:08
 (epstopdf)                    size: 679703 bytes
@@ -2137,24 +2116,145 @@ rted-to.pdf>
 (epstopdf)                    size: 107229 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/gp/lam1s_init2_max
 evals3-eps-converted-to.pdf figures/gp/lam1s_init2_maxevals3.eps>
-(epstopdf)             \includegraphics on input line 247.
+(epstopdf)             \includegraphics on input line 238.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figures/gp/lam1s_init2_maxevals3-eps-converted
 -to.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> all
 owed
-<figures/gp/lam1s_init2_maxevals3-eps-converted-to.pdf, id=340, 433.62pt x 289.
+<figures/gp/lam1s_init2_maxevals3-eps-converted-to.pdf, id=419, 433.62pt x 289.
 08pt>
 File: figures/gp/lam1s_init2_maxevals3-eps-converted-to.pdf Graphic file (type 
 pdf)
 <use figures/gp/lam1s_init2_maxevals3-eps-converted-to.pdf>
 Package pdftex.def Info: figures/gp/lam1s_init2_maxevals3-eps-converted-to.pdf 
- used on input line 247.
+ used on input line 238.
 (pdftex.def)             Requested size: 276.559pt x 184.37979pt.
-[21
+[23
 
  <./figures/gp/lam1s_init2_maxevals3-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/rmatrix/sig001-002.eps>
+(epstopdf)                    date: 2019-08-20 11:39:55
+(epstopdf)                    size: 66107 bytes
+(epstopdf)             Output file: <figures/rmatrix/sig001-002-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 30647 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/rmatrix/sig001-002
+-eps-converted-to.pdf figures/rmatrix/sig001-002.eps>
+(epstopdf)             \includegraphics on input line 254.
+runsystem(repstopdf --outfile=figures/rmatrix/sig001-002-eps-converted-to.pdf f
+igures/rmatrix/sig001-002.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/rmatrix/sig001-002-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 30647 bytes.
+
+
+pdfTeX warning: pdflatex (file ./figures/rmatrix/sig001-002-eps-converted-to.pd
+f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/rmatrix/sig001-002-eps-converted-to.pdf, id=463, 681.54625pt x 560.092
+5pt>
+File: figures/rmatrix/sig001-002-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/rmatrix/sig001-002-eps-converted-to.pdf>
+Package pdftex.def Info: figures/rmatrix/sig001-002-eps-converted-to.pdf  used 
+on input line 254.
+(pdftex.def)             Requested size: 122.91406pt x 101.00887pt.
+Package epstopdf Info: Source file: <figures/rmatrix/sig001-003.eps>
+(epstopdf)                    date: 2019-08-20 11:39:55
+(epstopdf)                    size: 65947 bytes
+(epstopdf)             Output file: <figures/rmatrix/sig001-003-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 25603 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/rmatrix/sig001-003
+-eps-converted-to.pdf figures/rmatrix/sig001-003.eps>
+(epstopdf)             \includegraphics on input line 254.
+runsystem(repstopdf --outfile=figures/rmatrix/sig001-003-eps-converted-to.pdf f
+igures/rmatrix/sig001-003.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/rmatrix/sig001-003-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 25603 bytes.
+
+
+pdfTeX warning: pdflatex (file ./figures/rmatrix/sig001-003-eps-converted-to.pd
+f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/rmatrix/sig001-003-eps-converted-to.pdf, id=464, 681.54625pt x 560.092
+5pt>
+File: figures/rmatrix/sig001-003-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/rmatrix/sig001-003-eps-converted-to.pdf>
+Package pdftex.def Info: figures/rmatrix/sig001-003-eps-converted-to.pdf  used 
+on input line 254.
+(pdftex.def)             Requested size: 122.91406pt x 101.00887pt.
+Package epstopdf Info: Source file: <figures/rmatrix/sig001-006.eps>
+(epstopdf)                    date: 2019-08-20 11:39:55
+(epstopdf)                    size: 64427 bytes
+(epstopdf)             Output file: <figures/rmatrix/sig001-006-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 22331 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/rmatrix/sig001-006
+-eps-converted-to.pdf figures/rmatrix/sig001-006.eps>
+(epstopdf)             \includegraphics on input line 254.
+runsystem(repstopdf --outfile=figures/rmatrix/sig001-006-eps-converted-to.pdf f
+igures/rmatrix/sig001-006.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/rmatrix/sig001-006-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 22331 bytes.
+
+
+pdfTeX warning: pdflatex (file ./figures/rmatrix/sig001-006-eps-converted-to.pd
+f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/rmatrix/sig001-006-eps-converted-to.pdf, id=465, 685.56125pt x 560.092
+5pt>
+File: figures/rmatrix/sig001-006-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/rmatrix/sig001-006-eps-converted-to.pdf>
+Package pdftex.def Info: figures/rmatrix/sig001-006-eps-converted-to.pdf  used 
+on input line 254.
+(pdftex.def)             Requested size: 122.91406pt x 100.41916pt.
+Package epstopdf Info: Source file: <figures/rmatrix/sig001-007.eps>
+(epstopdf)                    date: 2019-08-20 11:39:55
+(epstopdf)                    size: 64282 bytes
+(epstopdf)             Output file: <figures/rmatrix/sig001-007-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 21211 bytes
+(epstopdf)             Command: <repstopdf --outfile=figures/rmatrix/sig001-007
+-eps-converted-to.pdf figures/rmatrix/sig001-007.eps>
+(epstopdf)             \includegraphics on input line 254.
+runsystem(repstopdf --outfile=figures/rmatrix/sig001-007-eps-converted-to.pdf f
+igures/rmatrix/sig001-007.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/rmatrix/sig001-007-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2019-08-20 11:13:52
+(epstopdf)                    size: 21211 bytes.
+
+
+pdfTeX warning: pdflatex (file ./figures/rmatrix/sig001-007-eps-converted-to.pd
+f): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<figures/rmatrix/sig001-007-eps-converted-to.pdf, id=466, 686.565pt x 560.0925p
+t>
+File: figures/rmatrix/sig001-007-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/rmatrix/sig001-007-eps-converted-to.pdf>
+Package pdftex.def Info: figures/rmatrix/sig001-007-eps-converted-to.pdf  used 
+on input line 254.
+(pdftex.def)             Requested size: 122.91406pt x 100.26534pt.
+
+Overfull \vbox (10.02098pt too high) detected at line 254
+ []
+
+[24
+
+ <./figures/rmatrix/sig001-002-eps-converted-to.pdf> <./figures/rmatrix/sig001-
+003-eps-converted-to.pdf> <./figures/rmatrix/sig001-006-eps-converted-to.pdf> <
+./figures/rmatrix/sig001-007-eps-converted-to.pdf>]
 \tf@nav=\write8
 \openout8 = `atomicML.nav'.
 
@@ -2164,16 +2264,17 @@ Package pdftex.def Info: figures/gp/lam1s_init2_maxevals3-eps-converted-to.pdf
 \tf@snm=\write10
 \openout10 = `atomicML.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 256.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 256.
  (./atomicML.aux
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 256.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 256.
 Package rerunfilecheck Info: File `atomicML.out' has not changed.
-(rerunfilecheck)             Checksum: 4991B6C90431D594C673AF91BDC25BA8;187.
+(rerunfilecheck)             Checksum: B15AB4BDB33B8B9EAA9C13DA113DDF5A;245.
+
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.12pt have occurred.
@@ -2183,11 +2284,11 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 39382 strings out of 494861
- 806084 string characters out of 6178804
- 909207 words of memory out of 5000000
- 41950 multiletter control sequences out of 15000+600000
- 545676 words of font info for 77 fonts, out of 8000000 for 9000
+ 39464 strings out of 494861
+ 808204 string characters out of 6178804
+ 908348 words of memory out of 5000000
+ 42019 multiletter control sequences out of 15000+600000
+ 544794 words of font info for 74 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  60i,17n,94p,10413b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
@@ -2204,10 +2305,10 @@ nts/cm/cmssi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
 
-Output written on atomicML.pdf (21 pages, 897331 bytes).
+Output written on atomicML.pdf (24 pages, 1105364 bytes).
 PDF statistics:
- 441 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 359 compressed objects within 4 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 203 words of extra memory for PDF output out of 10000 (max. 10000000)
 

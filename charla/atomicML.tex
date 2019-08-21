@@ -82,7 +82,7 @@ alemendez@iafe.uba.ar}}
 \begin{frame}
 \frametitle{Método de Inversión Depurada (DIM)}
 
-\vspace{1cm}
+\vspace{-1.5cm}
 \begin{equation*}
 \tikzmarkin[draw=darkgray,fill=darkgray!10]{potencial}(0.2,-0.3)(-0.1,0.65)
 T_{fi} = \big| \langle \psi_f |  V 
@@ -97,51 +97,19 @@ T_{fi} = \big| \langle \psi_f |  V
 \node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{orange-red}{¿Cómo conocemos V?}};
 \draw<2->[arrow, bend right=30, dashed] ([xshift=0cm,yshift=0cm]{potexp.west}) to
          ([xshift=2.5cm,yshift=-0.2cm]{potencial});  
+\node<3> (schro) at (5cm,-1cm)
+{$ \left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
++ V_{nl}(r) \right] \, P_{nl}(r) = 
+\varepsilon_{nl} \, P_{nl}(r) $};
+\node<4-> (schro) at (5cm,-1cm)
+{$ \left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
+- \frac{Z_{nl}(r)}{r} \right] \, P_{nl}(r) = 
+\varepsilon_{nl} \, P_{nl}(r) $};
+\node<5-> (znl) at (5cm,-2.5cm)
+{$ Z_{nl}(r) = -\frac{1}{2} 
+\frac{P_{nl}''(r)}{ P_{nl}(r)} \,r
++ \frac{l(l+1)}{2 r} - \varepsilon_{nl} \,r $};
 \end{tikzpicture}
-\pause
-\begin{eqnarray*}
-\left[ -\frac{1}{2} \frac{\partial^2}{\partial r^2} 
-+ \frac{l(l+1)}{2 r^2} + {\color{orange-red}\mathbf{V_{nl}(r)}} \right] \, \varphi_{nl}(r) = 
-E_{nl} \, \varphi_{nl}(r)
-\end{eqnarray*}
-\pause
-\begin{eqnarray*}
-{\color{orange-red}\mathbf{V_{nl}(r)}} = \frac{1}{2} 
-\frac{\varphi_{nl}''(r)}{ \varphi_{nl}(r)}
-- \frac{l(l+1)}{2 r^2} + E_{nl}
-\end{eqnarray*}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Método de Inversión Depurada (DIM)}
-
-\vspace{1cm}
-\begin{equation*}
-\tikzmarkin[draw=darkgray,fill=darkgray!10]{potencial}(0.2,-0.3)(-0.1,0.65)
-T_{fi} = \big| \langle \psi_f |  V 
-| \psi_i \rangle \big|^2 
-\tikzmarkend{potencial}
-\end{equation*}
-\begin{tikzpicture}[remember picture, overlay,
-  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=3cm,
-  minimum width=1.2cm, minimum height=0.7cm, text centered},
-  arrow/.style={red,ultra thick,->,>=latex}]
-\node<1->[expl1] (potexp) at (9.5cm,2cm) {\color{orange-red}{¿Cómo conocemos V?}};
-\draw<1->[arrow, bend right=30, dashed] ([xshift=0cm,yshift=0cm]{potexp.west}) to
-         ([xshift=2.5cm,yshift=-0.2cm]{potencial});  
-\end{tikzpicture}
-\begin{eqnarray*}
-\left[ -\frac{1}{2} \frac{\partial^2}{\partial r^2} 
-+ \frac{l(l+1)}{2 r^2} {\color{orange-red} - \frac{\mathbf{Z_{nl}(r)}}{r}} \right] \, \varphi_{nl}(r) = 
-E_{nl} \, \varphi_{nl}(r)
-\end{eqnarray*}
-\pause
-\begin{eqnarray*}
-{\color{orange-red}\mathbf{Z_{nl}(r)}} = -\frac{1}{2} 
-\frac{\varphi_{nl}''(r)}{ \varphi_{nl}(r)} \,r
-+ \frac{l(l+1)}{2 r} - E_{nl} \,r
-\end{eqnarray*}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -153,7 +121,7 @@ E_{nl} \, \varphi_{nl}(r)
   \node (img1) 
   {\includegraphics[width=0.95\textwidth]{figures/dim/wavefun2sKr.pdf}};
   \node<1-> (eq1) at (img1) [yshift=1.4cm,xshift=1.5cm]
-  {$Z(r) = -\frac{1}{2} \frac{\varphi''(r)}{ \varphi(r)} \,r  - E \, r$}; 
+  {$Z(r) = -\frac{1}{2} \frac{P''(r)}{P(r)} \,r  - E \, r$}; 
   \node (eq2) at (img1) [yshift=3cm,xshift=4cm] 
   {{\normalsize $2s$ Kr}}; 
   \node<2-> (img2) at (img1.west) [xshift=2cm,yshift=-2.25cm]
@@ -163,8 +131,6 @@ E_{nl} \, \varphi_{nl}(r)
 \end{tikzpicture}
 
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Depuraci\'on}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Depuraci\'on}
@@ -227,7 +193,32 @@ E_{nl} \, \varphi_{nl}(r)
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Optimización}
+\section{Estructura atómica}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Estructura atómica}
+
+\begin{equation*}
+\left[ \frac{1}{2} \frac{d^2}{dr^2} - \frac{l(l+1)}{2r^2} 
++ V_{\mbox{\scriptsize eff}}(r) + \epsilon_{nl} \right] P_{nl}(r)=0\,,
+\end{equation*}
+
+\medskip
+Model potential:
+\begin{itemize}
+ \item Thomas–Fermi–Dirac–Amaldi [13]. 
+ \item Slater-Type-Orbital potential of Burgess [23] 
+ \item Self-consistent configuration average potential of Cowan [7]
+\end{itemize}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Inferencia Bayesiana}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Optimización Bayesiana}
@@ -239,12 +230,27 @@ E_{nl} \, \varphi_{nl}(r)
 
 \begin{tikzpicture}[remember picture, overlay]
   \tikzset{shift={(current page.center)},xshift=0cm,yshift=-0.5cm}
-  \pause{}
   \node<1> (prior) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2.eps}};
   \node<2> (max1) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals1.eps}};
   \node<3> (max2) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals2.eps}};
   \node<4> (max3) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals3.eps}};
 \end{tikzpicture}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Resultados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Resultados}
+
+\vspace{-0.2cm}
+\begin{figure}
+\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-002.eps}
+\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-003.eps} \\
+\vspace{0.2cm}
+\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-006.eps} 
+\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-007.eps}
+\end{figure}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
