@@ -5,8 +5,8 @@
 \usepackage{comment}
 
 \makeatletter
-\newcommand{\vast}{\bBigg@{5}}
-\newcommand{\Vast}{\bBigg@{6}}
+\newcommand{\vast}{\bBigg@{4}}
+\newcommand{\Vast}{\bBigg@{5}}
 \makeatother
 
 %configuration file
@@ -68,7 +68,6 @@ alemendez@iafe.uba.ar}}
 \myDetails 
 
 \end{frame}
-\begin{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -78,99 +77,7 @@ alemendez@iafe.uba.ar}}
 \text{\huge \bf Machine} \\
 \vspace{2pt}
 \text{\huge\bf Learning}}
- \end{textblock} }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Inferencia Bayesiana}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Optimización Bayesiana}
-
-Sea $f:\mathcal{X}\rightarrow\mathbb{R}$
-\begin{equation*}
-  \mathbf{x}_{\mbox{\scriptsize opt}}=
-  \underset{\mathbf{x}\in\mathcal{X}}{\mbox{arg máx}} f(\mathbf{x})
-\end{equation*}
-\begin{flushright}
-donde $\mathcal{X}\subset\mathbb{R}^d $
-\end{flushright}
-
-\pause
-\begin{equation*}
-\tikzmarkin[draw=darkgray,fill=darkgray!10]{bayes}(0.2,-0.6)(-0.1,0.85)
-p(\boldsymbol{\theta}|\mathbf{y},X)=
-\frac{p(\mathbf{y}|X,\boldsymbol{\theta})p(\boldsymbol\theta)}
-{p(\mathbf{y}|X)}
-\tikzmarkend{bayes}
-\end{equation*}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Procesos Gaussianos}
-
-Un proceso Gaussiano es un proceso estocástico especificado por
-
-\begin{itemize}
-\item Función media: 
-\begin{equation*}
-\mu(\mathbf{x})=\mathbb{E}\left[f(\mathbf{x})\right]
-\end{equation*}
-\item Función de covariancia:
-\begin{equation*}
-\kappa(\mathbf{x},\mathbf{x}')=\mathbb{E}\left[
-\left(f(\mathbf{x})-\mu(\mathbf{x})\right)
-\left(f(\mathbf{x}')-\mu(\mathbf{x}')\right)\right]
-\end{equation*}
-\end{itemize}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Formalismo}
-
-In supervised learning, we often use parametric models 
-$p(\mathbf{y} \lvert \mathbf{X},\boldsymbol\theta)$ to explain data 
-and infer optimal values of parameter $\boldsymbol\theta$ via 
-maximum likelihood or maximum a posteriori estimation.
-If needed we can also infer a full posterior distribution
-$p(\boldsymbol\theta \lvert \mathbf{X},\mathbf{y})$ instead of a 
-point estimate $\boldsymbol{\hat\theta}$. 
-With increasing data complexity, models with a higher number of 
-parameters are usually needed to explain data reasonably well. 
-Methods that use models with a fixed number of parameters are called 
-parametric methods. 
-
-In non-parametric methods, on the other hand, the number of parameters depend on the dataset size. For example, in [Nadaraya-Watson kernel regression](https://en.wikipedia.org/wiki/Kernel_regression), a weight $w_i$ is assigned to each observed target $y_i$ and for predicting the target value at a new point $\mathbf{x}$ a weighted average is computed: 
-
-$$f(\mathbf{x}) = \sum_{i=1}^{N}w_i(\mathbf{x})y_i$$
-
-$$w_i(\mathbf{x}) = \frac{\kappa(\mathbf{x}, \mathbf{x}_{i})}{\sum_{i'=1}^{N}\kappa(\mathbf{x}, \mathbf{x}_{i'})}$$
-
-Observations that are closer to $\mathbf{x}$ have a higher weight than observations that are further away. Weights are computed from $\mathbf{x}$ and observed $\mathbf{x}_i$ with a kernel $\kappa$. A special case is k-nearest neighbors (KNN) where the $k$ closest observations have a weight $1/k$, and all others have weight $0$. Non-parametric methods often need to process all training data for prediction and are therefore slower at inference time than parametric methods. On the other hand, training is usually faster as non-parametric models only need to remember training data. 
-
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Tipos de kernels}
-
-\begin{itemize}
-\item Lineal:
-\item Polinomico: 
-\item Gaussiano:
-\item Exponencial:
-\item Laplaciano:
-\item Tangente hiperbólico:
-\end{itemize}
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{La función de adquisición}
-
-
-\end{frame}
-\end{comment}
+ \end{textblock}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \framepic[1.]{figures/ionization.png}{}
@@ -357,23 +264,23 @@ E_{nl} \, P_{nl}(r) $};
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Ejemplo: Litio}
+\frametitle{Ejemplo: Berilio}
 \begin{tikzpicture}[remember picture,overlay]
-  \tikzset{shift={(current page.center)},xshift=-4cm,yshift=0cm}
-  \node (licfg)
-  {$\,\Vast\{ 
+  \tikzset{shift={(current page.center)},xshift=0.5cm,yshift=0cm}
+  \node<-1> (be_config) 
+  {\includegraphics[width=0.7\textwidth]{figures/theoryRM/example_conf.eps}};
+  \node<-1> (be_ecfgs) at (be_config) [xshift=-5.25cm,yshift=1.5cm]
+  {\small$ 
     \begin{array}{l}
-      1s^2 2s \\
-      1s^2 2p \\
-      1s^2 3s \\
-      1s^2 3p \\
-      1s^2 3d \\
-      \cdots
-    \end{array}$};
-  \node (lilevels) at (licfg) [xshift=5.5cm,yshift=0cm]
-  {\includegraphics[width=0.7\textwidth]{figures/theoryRM/li_levels.eps}};
-  \node<2-> (li) at (licfg) [xshift=5.5cm,yshift=0cm]
-  {\includegraphics[width=0.7\textwidth]{figures/theoryRM/li_convergence.eps}};
+      1s^2 2s^2 \\
+      1s^2 2snl \\
+      1s^2 2p^2 \\
+      1s^2 2pnl \\
+    \end{array}\!\vast\} $};
+  \node<2-> (be_levels) at (be_config) [xshift=-0.5cm,yshift=0cm]
+  {\includegraphics[width=0.7\textwidth]{figures/theoryRM/Be_levels.eps}};
+  \node<3-> (be_var) at (be_config) [xshift=-0.5cm,yshift=0cm]
+  {\includegraphics[width=0.7\textwidth]{figures/theoryRM/example_var.eps}};
 \end{tikzpicture}
 
 \end{frame}
@@ -419,7 +326,7 @@ E_{nl} \, P_{nl}(r) $};
 - E_j^{\mbox{\small teo}}}{E_j^{\mbox{\small teo}}} \right|
 \end{equation*}
 
-\medskip
+\bigskip
 \begin{itemize}
 \item DIM: $\boldsymbol{\xi}=\{\boldsymbol{\alpha},\boldsymbol{\beta} \}$
 \item R--Matrix: $\boldsymbol{\xi}=\{ Configuraciones,\boldsymbol{\lambda} \}$
@@ -427,55 +334,17 @@ E_{nl} \, P_{nl}(r) $};
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{comment}
-
-\begin{tikzpicture}[remember picture, overlay]
-  \tikzset{shift={(current page.center)},xshift=0cm,yshift=2.25cm}
-  \node (eq0) 
-  {$\left[ \frac{1}{2} \frac{d^2}{dr^2} - \frac{l(l+1)}{2r^2} 
-     + V_{\mbox{\scriptsize eff}}(r) + \epsilon_{nl} \right] 
-     P_{nl}(r)=0$};
-  \node<-1> (pot) at (eq0) [xshift=-2cm,yshift=-3.75cm]
-  {
-    {\begin{varwidth}{\linewidth}
-%     Potencial modelo:
-     \begin{itemize}
-        \item Thomas–Fermi–Dirac–Amaldi 
-          $$ V(\lambda_{nl},r) = $$
-        \item Slater-Type-Orbital de Burgess  
-          $$ V(\lambda_{nl},r) = $$
-     \end{itemize}
-     \end{varwidth}}}; 
-\end{tikzpicture}
-
-  \node<2-> (fun) at (eq0) [xshift=-0.1cm,yshift=-4cm]
-  {
-    {\begin{varwidth}{\linewidth}
-     Funciones de onda:
-     \begin{itemize}
-        \item Estados espectroscópicos:
-\vspace{-0.3cm}
-          $$  P_{nl}(r)=\sqrt{\frac{(2\lambda_{\text{nl}})^{2I_{\text{nl}}+1}}{\left(2 I_{\text{nl}}\right)!}}\, r^{I_{\text{nl}}} 
-   e^{-\lambda_{\text{nl}}r} $$
-\vspace{-0.7cm}
-        \item Pseudo--estados:
-\vspace{-0.2cm}
-          $$  P_{nl}(r) = N_{nl}\,(\lambda_{nl} Z r)^{l+1} \,e^{-\lambda_{nl}Zr/2} \,
- L_{n+l}^{2l+1}(\lambda_{nl} Z r) $$
-     \end{itemize}
-     \end{varwidth}}}; 
-\end{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Procesos Gaussianos}
 
-\begin{tikzpicture}[remember picture, overlay]
-  \tikzset{shift={(current page.center)},xshift=0cm,yshift=-0.5cm}
-  \node<1> (prior) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2.eps}};
-  \node<2> (max1) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals1.eps}};
-  \node<3> (max2) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals2.eps}};
-  \node<4> (max3) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals3.eps}};
-\end{tikzpicture}
+%\begin{tikzpicture}[remember picture, overlay]
+%  \tikzset{shift={(current page.center)},xshift=0cm,yshift=-0.5cm}
+%  \node<1> (prior) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2.eps}};
+%  \node<2> (max1) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals1.eps}};
+%  \node<3> (max2) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals2.eps}};
+%  \node<4> (max3) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals3.eps}};
+%\end{tikzpicture}
+
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resultados}
