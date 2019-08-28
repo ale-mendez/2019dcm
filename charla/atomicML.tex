@@ -334,37 +334,114 @@ E_{nl} \, P_{nl}(r) $};
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Procesos Gaussianos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Procesos Gaussianos}
 
-%\begin{tikzpicture}[remember picture, overlay]
-%  \tikzset{shift={(current page.center)},xshift=0cm,yshift=-0.5cm}
-%  \node<1> (prior) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2.eps}};
-%  \node<2> (max1) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals1.eps}};
-%  \node<3> (max2) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals2.eps}};
-%  \node<4> (max3) {\includegraphics[width=0.9\textwidth]{figures/gp/lam1s_init2_maxevals3.eps}};
-%\end{tikzpicture}
+\begin{tikzpicture}[remember picture, overlay]
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=-0.5cm}
+  \node<1> (func) {\includegraphics[width=0.9\textwidth]{figures/gp/funcion.eps}};
+  \node<2> (prior) {\includegraphics[width=0.9\textwidth]{figures/gp/initer/example.eps}};
+  \node<3> (max1) {\includegraphics[width=0.9\textwidth]{figures/gp/eval1/example.eps}};
+  \node<4> (max2) {\includegraphics[width=0.9\textwidth]{figures/gp/eval2/example.eps}};
+  \node<5> (max3) {\includegraphics[width=0.9\textwidth]{figures/gp/eval3/example.eps}};
+  \node<6> (max4) {\includegraphics[width=0.9\textwidth]{figures/gp/eval4/example.eps}};
+  \node<7> (max5) {\includegraphics[width=0.9\textwidth]{figures/gp/eval5/example.eps}};
+  \node<8> (max6) {\includegraphics[width=0.9\textwidth]{figures/gp/eval6/example.eps}};
+  \node<9> (max7) {\includegraphics[width=0.9\textwidth]{figures/gp/eval7/example.eps}};
+  \node<10> (max9) {\includegraphics[width=0.9\textwidth]{figures/gp/eval8/example.eps}};
+  \node<11> (max10) {\includegraphics[width=0.9\textwidth]{figures/gp/eval9/example.eps}};
+\end{tikzpicture}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resultados}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Resultados DIM}
+\frametitle{DIM: Mg}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \tikzset{shift={(current page.center)},xshift=-2.9cm,yshift=0.65cm}
+  \node (1spot) 
+  {\includegraphics[width=0.5\textwidth]{figures/dim/1s_pot.eps}};
+  \node (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
+  {$1s$};
+  \node (1swfn) at (1spot) [xshift=5.6cm,yshift=0cm]
+  {\includegraphics[width=0.5\textwidth]{figures/dim/1s_wfn.eps}};
+  \node (1serr) at (1spot) [xshift=5.6cm,yshift=-3.18cm]
+  {\includegraphics[width=0.5\textwidth]{figures/dim/error_1s.eps}};
+  \node (error) at (1spot) [xshift=0cm,yshift=-2.7cm]
+  {$E \sim 10^{-6} $};
+  \node (error) at (1spot) [xshift=0cm,yshift=-3.5cm]
+  {$\langle r\rangle, \langle 1/r \rangle \sim 10^{-2} $};
+\end{tikzpicture}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Resultados R--Matrix}
+\frametitle{DIM: Mg}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \tikzset{shift={(current page.center)},xshift=-2.9cm,yshift=0.65cm}
+  \node (1spot) 
+  {\includegraphics[width=0.5\textwidth]{figures/dim/2s_pot.eps}};
+  \node (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
+  {$2s$};
+  \node (1swfn) at (1spot) [xshift=5.58cm,yshift=0cm]
+  {\includegraphics[width=0.505\textwidth]{figures/dim/2s_wfn.eps}};
+  \node (1serr) at (1spot) [xshift=5.6cm,yshift=-3.11cm]
+  {\includegraphics[width=0.5\textwidth]{figures/dim/error_2s.eps}};
+  \node (error) at (1spot) [xshift=0cm,yshift=-2.7cm]
+  {$E \sim 10^{-7} $};
+  \node (error) at (1spot) [xshift=0cm,yshift=-3.5cm]
+  {$\langle r\rangle, \langle 1/r \rangle \sim 10^{-2} $};
+\end{tikzpicture}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{DIM: Mg}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \tikzset{shift={(current page.center)},xshift=-2.9cm,yshift=0.65cm}
+  \node (1spot) 
+  {\includegraphics[width=0.5\textwidth]{figures/dim/3s_pot.eps}};
+  \node (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
+  {$3s$};
+  \node (1swfn) at (1spot) [xshift=5.58cm,yshift=0cm]
+  {\includegraphics[width=0.505\textwidth]{figures/dim/3s_wfn.eps}};
+  \node (1serr) at (1spot) [xshift=5.6cm,yshift=-3.11cm]
+  {\includegraphics[width=0.5\textwidth]{figures/dim/error_3s.eps}};
+  \node (error) at (1spot) [xshift=0cm,yshift=-2.7cm]
+  {$E \sim 10^{-5} $};
+  \node (error) at (1spot) [xshift=0cm,yshift=-3.5cm]
+  {$\langle r\rangle, \langle 1/r \rangle \sim 10^{-1} $};
+\end{tikzpicture}
+
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{R--Matrix: Berilio}
 
 \vspace{-0.2cm}
 \begin{figure}
-\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-002.eps}
+\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-002.eps} 
+\hspace{0.3cm}
 \includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-003.eps} \\
 \vspace{0.2cm}
 \includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-006.eps} 
+\hspace{0.3cm}
 \includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-007.eps}
 \end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Conclusiones}
+
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
