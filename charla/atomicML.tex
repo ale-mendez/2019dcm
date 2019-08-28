@@ -99,7 +99,7 @@ T_{fi} = \big| \langle \psi_f |  V
   minimum width=1.2cm, minimum height=0.7cm, text centered},
   arrow/.style={red,ultra thick,->,>=latex}
   ]
-\node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{orange-red}{¿Cómo conocemos V?}};
+\node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{orange-red}{¿Cómo obtener V?}};
 \draw<2->[arrow, bend right=30, dashed] ([xshift=0cm,yshift=0cm]{potexp.west}) to
          ([xshift=2.5cm,yshift=-0.2cm]{potencial});  
 \node<3> (schro) at (5cm,-1cm)
@@ -125,8 +125,8 @@ E_{nl} \, P_{nl}(r) $};
 \begin{tikzpicture}
   \node (img1) 
   {\includegraphics[width=0.95\textwidth]{figures/dim/wavefun2sKr.pdf}};
-  \node<1-> (eq1) at (img1) [yshift=1.4cm,xshift=1.5cm]
-  {$Z(r) = -\frac{1}{2} \frac{P''(r)}{P(r)} \,r  - E \, r$}; 
+%  \node<1-> (eq1) at (img1) [yshift=1.4cm,xshift=1.5cm]
+%  {$Z(r) = -\frac{1}{2} \frac{P''(r)}{P(r)} \,r  - E \, r$}; 
   \node (eq2) at (img1) [yshift=3cm,xshift=4cm] 
   {{\normalsize $2s$ Kr}}; 
   \node<2-> (img2) at (img1.west) [xshift=2cm,yshift=-2.25cm]
