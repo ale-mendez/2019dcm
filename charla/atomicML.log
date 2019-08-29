@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2019.2.15)  29 AUG 2019 17:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2019.2.15)  29 AUG 2019 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2159,7 +2159,7 @@ Overfull \hbox (2.11488pt too wide) in paragraph at lines 491--491
 
 ]
 Package epstopdf Info: Source file: <figures/gp/funcion.eps>
-(epstopdf)                    date: 2019-08-28 17:29:55
+(epstopdf)                    date: 2019-08-29 17:21:33
 (epstopdf)                    size: 459622 bytes
 (epstopdf)             Output file: <figures/gp/funcion-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-08-28 17:31:06
@@ -2167,7 +2167,12 @@ Package epstopdf Info: Source file: <figures/gp/funcion.eps>
 (epstopdf)             Command: <repstopdf --outfile=figures/gp/funcion-eps-con
 verted-to.pdf figures/gp/funcion.eps>
 (epstopdf)             \includegraphics on input line 519.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=figures/gp/funcion-eps-converted-to.pdf figures/g
+p/funcion.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/gp/funcion-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-29 17:22:26
+(epstopdf)                    size: 42855 bytes.
 
 
 pdfTeX warning: pdflatex (file ./figures/gp/funcion-eps-converted-to.pdf): PDF 
@@ -2183,7 +2188,7 @@ line 519.
 
  <./figures/gp/funcion-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/gp/func_mean.eps>
-(epstopdf)                    date: 2019-08-28 17:29:57
+(epstopdf)                    date: 2019-08-29 17:21:35
 (epstopdf)                    size: 11911786 bytes
 (epstopdf)             Output file: <figures/gp/func_mean-eps-converted-to.pdf>
 
@@ -2192,7 +2197,13 @@ Package epstopdf Info: Source file: <figures/gp/func_mean.eps>
 (epstopdf)             Command: <repstopdf --outfile=figures/gp/func_mean-eps-c
 onverted-to.pdf figures/gp/func_mean.eps>
 (epstopdf)             \includegraphics on input line 519.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=figures/gp/func_mean-eps-converted-to.pdf figures
+/gp/func_mean.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/gp/func_mean-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2019-08-29 17:22:29
+(epstopdf)                    size: 2017014 bytes.
 
 
 pdfTeX warning: pdflatex (file ./figures/gp/func_mean-eps-converted-to.pdf): PD
@@ -2208,15 +2219,20 @@ t line 519.
 
  <./figures/gp/func_mean-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/gp/func_acq.eps>
-(epstopdf)                    date: 2019-08-28 17:30:26
-(epstopdf)                    size: 11916708 bytes
+(epstopdf)                    date: 2019-08-29 17:21:36
+(epstopdf)                    size: 11916609 bytes
 (epstopdf)             Output file: <figures/gp/func_acq-eps-converted-to.pdf>
 (epstopdf)                    date: 2019-08-28 17:31:13
 (epstopdf)                    size: 2019542 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/gp/func_acq-eps-co
 nverted-to.pdf figures/gp/func_acq.eps>
 (epstopdf)             \includegraphics on input line 519.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=figures/gp/func_acq-eps-converted-to.pdf figures/
+gp/func_acq.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/gp/func_acq-eps-converted-to.pdf>
+(epstopdf)                    date: 2019-08-29 17:22:32
+(epstopdf)                    size: 2019528 bytes.
 
 
 pdfTeX warning: pdflatex (file ./figures/gp/func_acq-eps-converted-to.pdf): PDF
@@ -2839,7 +2855,7 @@ si17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on atomicML.pdf (48 pages, 23917250 bytes).
+Output written on atomicML.pdf (48 pages, 23917236 bytes).
 PDF statistics:
  1175 PDF objects out of 1200 (max. 8388607)
  699 compressed objects within 7 object streams
