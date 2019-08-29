@@ -80,7 +80,7 @@ alemendez@iafe.uba.ar}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\framepic[1.]{figures/ionization.png}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framecard[colororange]{{\color{white}
+\framecard[colorblue]{{\color{white}
 {\Huge \bf Problema 1:} 
 \\ \vspace{0.5cm} 
 {\LARGE \bf Potenciales DIM}}}
@@ -132,17 +132,18 @@ E_{nl} \, P_{nl}(r) $};
 \frametitle{Houston, we have a problem!}
 
 \vspace{-0.25cm}
-\begin{tikzpicture}
+\begin{tikzpicture}[remember picture,overlay]
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=0.1cm}
   \node (img1) 
-  {\includegraphics[width=0.95\textwidth]{figures/dim/wavefun2sKr.pdf}};
+  {\includegraphics[width=0.95\textwidth]{figures/dim/wavefun2sKr.eps}};
   \node<1-> (eq1) at (img1) [yshift=1.4cm,xshift=1.5cm]
   {$Z(r) = -\frac{1}{2} \frac{P''(r)}{P(r)} \,r  - E \, r$}; 
-  \node (eq2) at (img1) [yshift=3cm,xshift=4cm] 
-  {{\normalsize $2s$ Kr}}; 
-  \node<2-> (img2) at (img1.west) [xshift=2cm,yshift=-2.25cm]
-  {\includegraphics[width=0.4\textwidth]{figures/dim/problem1-2sKr.pdf}};
-  \node<3-> (img3) at (img1.east) [xshift=-1.75cm,yshift=-2.25cm]
-  {\includegraphics[width=0.4\textwidth]{figures/dim/problem2-2sKr.pdf}};
+  \node[draw,circle,minimum size=1cm,inner sep=0pt] (eq2) at (img1) [yshift=3.25cm,xshift=4.5cm] 
+  {Kr}; 
+  \node<2-> (img2) at (img1.west) [xshift=2cm,yshift=-2.5cm]
+  {\includegraphics[width=0.4\textwidth]{figures/dim/problem1-2sKr.eps}};
+  \node<3-> (img3) at (img1.east) [xshift=-1.75cm,yshift=-2.5cm]
+  {\includegraphics[width=0.4\textwidth]{figures/dim/problem2-2sKr.eps}};
 \end{tikzpicture}
 
 \end{frame}
@@ -154,8 +155,8 @@ E_{nl} \, P_{nl}(r) $};
   \tikzset{shift={(current page.center)},xshift=0cm,yshift=0.25cm}
   \node (img1) 
   {\includegraphics[width=0.7\textwidth]{figures/dim/depuration2sN-a.eps}};
-  \node (name) at (img1) [yshift=2.9cm,xshift=2.8cm] 
-  {$2s$ N};
+  \node[draw,circle,minimum size=1cm,inner sep=0pt] (name) at (img1) [yshift=3.2cm,xshift=3.4cm] 
+  {N};
   \node<3-> (eq1) at (img1) [yshift=-3.4cm,xshift=0cm]
   {\begin{minipage}{0.50\textwidth}
      \begin{equation*}
@@ -216,7 +217,7 @@ E_{nl} \, P_{nl}(r) $};
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framecard[colororange]{{\color{white}
+\framecard[orange(colorwheel)]{{\color{white}
 {\Huge \bf Problema 2:} 
 \\ \vspace{0.5cm} 
 {\LARGE \bf R--Matrix}}}
@@ -230,7 +231,7 @@ E_{nl} \, P_{nl}(r) $};
 \begin{column}{0.55\textwidth}
 \begin{center}
 \begin{figure}
-\includegraphics[width=\textwidth]{figures/theoryRM/regions.png}
+\includegraphics[width=\textwidth]{figures/rmatrix/regions.png}
 \end{figure}
 \end{center}
 \end{column}
@@ -260,26 +261,51 @@ E_{nl} \, P_{nl}(r) $};
 \begin{frame}
 \frametitle{Descripción del blanco}
 
-\begin{tikzpicture}[remember picture,overlay]
+\begin{tikzpicture}[remember picture,overlay,
+  arrow/.style={red,ultra thick,->,>=latex}]
   \tikzset{shift={(current page.center)},xshift=0cm,yshift=1.5cm}
   \node (eqCI) 
-  {$\tikzmarkin[draw=orange,fill=orange!10]{ci}(0.1,-0.4)(-0.1,0.65)
-    \Phi_i(\mathbf{r}) = \sum_j c_{ji} \phi_j(\mathbf{r})
-    \tikzmarkend{ci}$};
-  \node (name) at (eqCI) [xshift=4.cm,yshift=0cm]
-  {$\begin{array}{c}
-     \mbox{\small Configuration} \\
-     \mbox{\small interaction}
-   \end{array}$};
-  \node (pnl) at (eqCI) [xshift=0cm,yshift=-1.75cm]
-   {$\left[ \frac{1}{2} \frac{d^2}{dr^2} - \frac{l(l+1)}{2r^2} 
-     + V_{nl}^{\mbox{\scriptsize eff}}(\lambda_{nl},r) + E_{nl} \right] 
-     P_{nl}(r)=0$};
-  \node (pot) at (pnl) [xshift=-2cm,yshift=-2cm]
+  {\begin{minipage}{0.50\textwidth}
+     \begin{equation*}
+       \Phi_i(\mathbf{r}) =
+       \sum_j^{\tikzmarkin[draw=orange,fill=orange!10]{N}(0.1,-0.1)(-0.1,0.33)
+        N
+       \tikzmarkend{N}}
+       c_{ji} \, P_j(r) Y_j(\hat{r})
+     \end{equation*}
+   \end{minipage}};
+%  \node (name) at (eqCI) [xshift=4.35cm,yshift=-0.2cm]
+%  {$\begin{array}{c}
+%     \mbox{\small\it Configuration} \\
+%     \mbox{\small\it interaction}
+%   \end{array}$};
+  \node (nconf) at (eqCI) [xshift=3.5cm,yshift=1cm]
+  {\small\it Número de configuraciones};
+  \draw [arrow, bend right=-30] 
+  ([xshift=0.2cm,yshift=0cm]{N.east}) to ([xshift=0.1cm,yshift=0.1cm]{nconf.west});
+%%
+  \node (pnl) at (eqCI) [xshift=-2.35cm,yshift=-2.25cm]
+   {\begin{minipage}{0.50\textwidth}
+     \begin{equation*}
+       \left[ \frac{1}{2} \frac{d^2}{dr^2} - \frac{l(l+1)}{2r^2} 
+     + {\color{red}V_{nl}^{\mbox{\scriptsize eff}}(
+{\tikzmarkin[draw=orange,fill=orange!10]{lam}(0.0,-0.2)(-0.05,0.42)
+\lambda_{nl}
+\tikzmarkend{lam}},r)}
+ + E_{nl} \right] 
+     P_{nl}(r)=0
+     \end{equation*}
+   \end{minipage}};
+  \node (param) at (pnl) [xshift=6cm,yshift=1cm]
+  {\small\it Parámetro de escaleo};
+  \draw [arrow, bend right=-40] 
+  ([xshift=0.2cm,yshift=0cm]{lam.east}) to ([xshift=0.1cm,yshift=0.cm]{param.west});
+%%
+  \node (pot) at (pnl) [xshift=2.5cm,yshift=-2.2cm]
   {{\begin{varwidth}{\linewidth}
      \begin{itemize}
-        \item Thomas–Fermi–Dirac–Amaldi 
-        \item Slater-Type-Orbital de Burgess  
+        \itemb Thomas–Fermi–Dirac–Amaldi 
+        \itemb Slater-Type-Orbital de Burgess  
      \end{itemize}
     \end{varwidth}}}; 
 \end{tikzpicture}
@@ -287,12 +313,15 @@ E_{nl} \, P_{nl}(r) $};
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Ejemplo: Berilio}
+\frametitle{Influencia de $N$}
+
 \begin{tikzpicture}[remember picture,overlay]
-  \tikzset{shift={(current page.center)},xshift=0.5cm,yshift=0cm}
-  \node<-1> (be_config) 
-  {\includegraphics[width=0.7\textwidth]{figures/theoryRM/example_conf.eps}};
-  \node<-1> (be_ecfgs) at (be_config) [xshift=-5.25cm,yshift=1.5cm]
+  \tikzset{shift={(current page.center)},xshift=1cm,yshift=-0.5cm}
+  \node (be_config) 
+  {\includegraphics[width=0.8\textwidth]{figures/rmatrix/example_conf.eps}};
+  \node[draw,circle,minimum size=1cm,inner sep=0pt] (tag) at (be_config) 
+  [xshift=3.75cm,yshift=3.75cm] {Be};
+  \node (be_ecfgs) at (be_config) [xshift=-5.5cm,yshift=2cm]
   {\small$ 
     \begin{array}{l}
       1s^2 2s^2 \\
@@ -300,10 +329,21 @@ E_{nl} \, P_{nl}(r) $};
       1s^2 2p^2 \\
       1s^2 2pnl \\
     \end{array}\!\vast\} $};
-  \node<2> (be_levels) at (be_config) [xshift=-0.5cm,yshift=0cm]
-  {\includegraphics[width=0.8\textwidth]{figures/theoryRM/Be_levels.eps}};
-  \node<3-> (be_var) at (be_config) [xshift=-0.5cm,yshift=0cm]
-  {\includegraphics[width=0.7\textwidth]{figures/theoryRM/example_var.eps}};
+\end{tikzpicture}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Influencia de $\lambda_{nl}$}
+
+\begin{tikzpicture}[remember picture,overlay]
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=0cm}
+  \node<1> (be_levels) 
+  {\includegraphics[width=0.8\textwidth]{figures/rmatrix/Be_levels.eps}};
+  \node[draw,circle,minimum size=1cm,inner sep=0pt] (tag) at (be_levels) 
+  [xshift=4.75cm,yshift=3.25cm] {Be};
+  \node<2-> (be_var) at (be_levels) [xshift=0cm,yshift=-0.5cm]
+  {\includegraphics[width=0.8\textwidth]{figures/rmatrix/example_var.eps}};
 \end{tikzpicture}
 
 \end{frame}
@@ -315,18 +355,18 @@ E_{nl} \, P_{nl}(r) $};
   expl1/.style={draw=red,fill=orange!7,rounded corners,text width=3cm,
   minimum width=0.5cm, minimum height=0.7cm, text centered},
   arrow/.style={red,ultra thick,->,>=latex}]
-  \tikzset{shift={(current page.center)},xshift=0cm,yshift=1.75cm}
+  \tikzset{shift={(current page.center)},xshift=0.75cm,yshift=1.75cm}
   \node[expl1,text width=5.3cm] (defcfg) 
   {$\begin{array}{c}
    \mbox{Definición de} \\
    \mbox{configuración electrónica} \\
     \end{array}$};
-  \node[expl1,text width=2.75cm] (var) at (rem) [xshift=0cm,yshift=-1.8cm]
+  \node[expl1,text width=2.75cm] (var) at (defcfg) [xshift=0cm,yshift=-2.25cm]
   {Variación de parámetros};
   \node[expl1,text width=3.1cm] (diag) at (var) [xshift=2.5cm,yshift=-2cm]
   {Diagonalización};
   \node[expl1,text width=3.3cm] (err) at (var) [xshift=-2.5cm,yshift=-2cm]
-  {Calculo de error};
+  {Cálculo de error};
   \draw [arrow, bend right=0] 
   ([xshift=0cm,yshift=0cm]{defcfg}) to ([xshift=0cm,yshift=0cm]{var.north});
   \draw [arrow, bend right=-30] 
@@ -337,6 +377,8 @@ E_{nl} \, P_{nl}(r) $};
   ([xshift=0cm,yshift=0cm]{err}) to ([xshift=0cm,yshift=0cm]{var.west});
   \draw [arrow, bend right=-30,dashed] 
   ([xshift=-0.75cm,yshift=0cm]{err.north}) to ([xshift=0cm,yshift=-0.25cm]{defcfg.west});
+  \node[expl1,text width=2.25cm] (rmatrix) at (var) [xshift=-4.2cm,yshift=0.1cm]
+  {R--Matrix};
 \end{tikzpicture}
 
 \end{frame}
@@ -344,20 +386,116 @@ E_{nl} \, P_{nl}(r) $};
 \begin{frame}
 \frametitle{Síntesis del problema}
 
-\begin{equation*}
- J = \sum_j \left|\frac{E_j^{\mbox{\small calc}}(\boldsymbol{\xi}) 
-- E_j^{\mbox{\small teo}}}{E_j^{\mbox{\small teo}}} \right|
-\end{equation*}
+\begin{tikzpicture}[remember picture, overlay]
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=1cm}
+  \node (Jfunc) 
+  {\begin{minipage}{\textwidth}
+      Función de costo:
+      \medskip
+      \begin{equation*}
+       J = \sum_j \left|\frac{\widetilde{E_j}(\boldsymbol{\xi}) 
+      - E_j}{E_j} \right|
+      \end{equation*}
+   \end{minipage}};
+  \node (exppar) at (Jfunc) [xshift=0cm,yshift=-3cm]
+  {\begin{minipage}{\textwidth}
+      \begin{itemize}
+      \item DIM: $\boldsymbol{\xi}=\{\boldsymbol{\alpha},\boldsymbol{\beta} \}$
+      \item R--Matrix: $\boldsymbol{\xi}=\{N,\boldsymbol{\lambda} \}$
+      \end{itemize}
+   \end{minipage}};
+\end{tikzpicture}
 
-\bigskip
-\begin{itemize}
-\item DIM: $\boldsymbol{\xi}=\{\boldsymbol{\alpha},\boldsymbol{\beta} \}$
-\item R--Matrix: $\boldsymbol{\xi}=\{ Configuraciones,\boldsymbol{\lambda} \}$
-\end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Síntesis del problema}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \tikzset{shift={(current page.center)},xshift=-2.5cm,yshift=1cm}
+  \node (Jfunc) 
+  {\begin{minipage}{0.5\textwidth}
+      Función de costo:
+      \medskip
+      \begin{equation*}
+       J = \sum_j \left|\frac{\widetilde{E_j}(\boldsymbol{\xi}) 
+      - E_j}{E_j} \right|
+      \end{equation*}
+   \end{minipage}};
+  \node (exppar) at (Jfunc) [xshift=0.75cm,yshift=-3cm]
+  {\begin{minipage}{0.7\textwidth}
+      \begin{itemize}
+      \item DIM: $\boldsymbol{\xi}=\{\boldsymbol{\alpha},\boldsymbol{\beta} \}$
+      \item R--Matrix: $\boldsymbol{\xi}=\{N,\boldsymbol{\lambda} \}$
+      \end{itemize}
+   \end{minipage}};
+\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay,
+  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=3cm,
+  minimum width=0.5cm, minimum height=0.1cm, text centered},
+  arrow/.style={red,ultra thick,->,>=latex}]
+  \tikzset{shift={(current page.center)},xshift=3.5cm,yshift=3cm}
+  \node[expl1,text width=0.75cm,text height=0.1cm] (inv) 
+  {\tiny Inversión};
+  \node[expl1,text width=1.5cm,text height=0.1cm] (rem) at (inv) [xshift=0cm,yshift=-0.9cm]
+  {\tiny Remoción};
+  \node[expl1,text width=2.7cm,text height=0.1cm] (var) at (rem) [xshift=0cm,yshift=-0.9cm]
+  {\tiny Variación de parámetros};
+  \node[expl1,text width=1.7cm,text height=0.1cm] (diag) at (var) [xshift=1.5cm,yshift=-0.8cm]
+  {\tiny Diagonalización};
+  \node[expl1,text width=2cm,text height=0.1cm] (err) at (var) [xshift=-1.5cm,yshift=-0.8cm]
+  {\tiny Cálculo de error};
+  \draw [arrow, bend right=0] 
+  ([xshift=0cm,yshift=0cm]{inv}) to ([xshift=0cm,yshift=0cm]{rem.north});
+  \draw [arrow, bend right=0] 
+  ([xshift=0cm,yshift=0cm]{rem}) to ([xshift=0cm,yshift=0cm]{var.north});
+  \draw [arrow, bend right=-30] 
+  ([xshift=0cm,yshift=0cm]{var.east}) to ([xshift=0.5cm,yshift=0cm]{diag.north});
+  \draw [arrow, bend right=-40] 
+  ([xshift=0cm,yshift=0cm]{diag}) to ([xshift=0cm,yshift=0cm]{err.south});
+  \draw [arrow, bend right=-30] 
+  ([xshift=-0.5cm,yshift=0cm]{err.north}) to ([xshift=0cm,yshift=0cm]{var.west});
+  \draw [arrow, bend right=-30,dashed] 
+  ([xshift=-0.75cm,yshift=0cm]{err.north}) to ([xshift=0cm,yshift=-0.25cm]{rem.west});
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[remember picture, overlay,
+  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=3cm,
+  minimum width=0.5cm, minimum height=0.1cm, text centered},
+  arrow/.style={red,ultra thick,->,>=latex}]
+  \tikzset{shift={(current page.center)},xshift=3.8cm,yshift=-1.2cm}
+  \node[expl1,text width=2.5cm,text height=0.1cm] (defcfg) 
+  {\tiny Def. de config. elec.};
+  \node[expl1,text width=2.5cm] (var) at (defcfg) [xshift=0cm,yshift=-1.cm]
+  {\tiny Variación de parámetros};
+  \node[expl1,text width=1.5cm] (diag) at (var) [xshift=1.3cm,yshift=-1cm]
+  {\tiny Diagonalización};
+  \node[expl1,text width=1.7cm] (err) at (var) [xshift=-1.3cm,yshift=-1cm]
+  {\tiny Cálculo de error};
+  \draw [arrow, bend right=0] 
+  ([xshift=0cm,yshift=0cm]{defcfg}) to ([xshift=0cm,yshift=0cm]{var.north});
+  \draw [arrow, bend right=-20] 
+  ([xshift=0cm,yshift=0cm]{var.east}) to ([xshift=0.4cm,yshift=0cm]{diag.north});
+  \draw [arrow, bend right=-40] 
+  ([xshift=0cm,yshift=0cm]{diag}) to ([xshift=0cm,yshift=0cm]{err.south});
+  \draw [arrow, bend right=-30] 
+  ([xshift=-0.4cm,yshift=0cm]{err.north}) to ([xshift=0cm,yshift=0cm]{var.west});
+  \draw [arrow, bend right=-40,dashed] 
+  ([xshift=-0.75cm,yshift=0cm]{err.north}) to ([xshift=0cm,yshift=-0.25cm]{defcfg.west});
+  \node[expl1,text width=0.9cm] (rmatrix) at (var) [xshift=-2.5cm,yshift=0cm]
+  {\tiny R--Matrix};
+\end{tikzpicture}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Procesos Gaussianos}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\framecard[colorblue]{{\color{white}
+{\LARGE \bf Optimización Bayesiana} 
+\\ \vspace{0.5cm} 
+{\Large \bf con Procesos Gaussianos}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Procesos Gaussianos}
@@ -380,7 +518,11 @@ E_{nl} \, P_{nl}(r) $};
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resultados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\framecard[orange(colorwheel)]{\color{white}
+\LARGE \bf Resultados}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{DIM: Mg}
@@ -389,16 +531,20 @@ E_{nl} \, P_{nl}(r) $};
   \tikzset{shift={(current page.center)},xshift=-2.9cm,yshift=0.65cm}
   \node (1spot) 
   {\includegraphics[width=0.5\textwidth]{figures/dim/1s_pot.eps}};
-  \node (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
+  \node[draw,circle,minimum size=1cm,inner sep=0pt] (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
   {$1s$};
   \node (1swfn) at (1spot) [xshift=5.6cm,yshift=0cm]
   {\includegraphics[width=0.5\textwidth]{figures/dim/1s_wfn.eps}};
   \node (1serr) at (1spot) [xshift=5.6cm,yshift=-3.18cm]
   {\includegraphics[width=0.5\textwidth]{figures/dim/error_1s.eps}};
-  \node (error) at (1spot) [xshift=0cm,yshift=-2.7cm]
-  {$E \sim 10^{-6} $};
-  \node (error) at (1spot) [xshift=0cm,yshift=-3.5cm]
-  {$\langle r\rangle, \langle 1/r \rangle \sim 10^{-2} $};
+  \node (error) at (1spot) [xshift=0cm,yshift=-3.25cm]
+  {$\begin{array}{cc}
+      E & {\Large\color{forestgreen(web)} \checkmark} \\
+      \begin{array}{c}
+        \langle r\rangle \\
+        \langle 1/r \rangle
+      \end{array} & 10^{-2}
+    \end{array}$};
 \end{tikzpicture}
 
 \end{frame}
@@ -410,16 +556,20 @@ E_{nl} \, P_{nl}(r) $};
   \tikzset{shift={(current page.center)},xshift=-2.9cm,yshift=0.65cm}
   \node (1spot) 
   {\includegraphics[width=0.5\textwidth]{figures/dim/2s_pot.eps}};
-  \node (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
+  \node[draw,circle,minimum size=1cm,inner sep=0pt] (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
   {$2s$};
   \node (1swfn) at (1spot) [xshift=5.58cm,yshift=0cm]
   {\includegraphics[width=0.505\textwidth]{figures/dim/2s_wfn.eps}};
   \node (1serr) at (1spot) [xshift=5.6cm,yshift=-3.11cm]
   {\includegraphics[width=0.5\textwidth]{figures/dim/error_2s.eps}};
-  \node (error) at (1spot) [xshift=0cm,yshift=-2.7cm]
-  {$E \sim 10^{-7} $};
-  \node (error) at (1spot) [xshift=0cm,yshift=-3.5cm]
-  {$\langle r\rangle, \langle 1/r \rangle \sim 10^{-2} $};
+  \node (error) at (1spot) [xshift=0cm,yshift=-3.25cm]
+  {$\begin{array}{cc}
+      E & {\Large\color{forestgreen(web)} \checkmark} \\
+      \begin{array}{c}
+        \langle r\rangle \\
+        \langle 1/r \rangle
+      \end{array} & 10^{-2}
+    \end{array}$};
 \end{tikzpicture}
 
 
@@ -432,33 +582,37 @@ E_{nl} \, P_{nl}(r) $};
   \tikzset{shift={(current page.center)},xshift=-2.9cm,yshift=0.65cm}
   \node (1spot) 
   {\includegraphics[width=0.5\textwidth]{figures/dim/3s_pot.eps}};
-  \node (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
+  \node[draw,circle,minimum size=1cm,inner sep=0pt] (tag) at (1spot) [xshift=7.25cm,yshift=2.75cm]
   {$3s$};
   \node (1swfn) at (1spot) [xshift=5.58cm,yshift=0cm]
   {\includegraphics[width=0.505\textwidth]{figures/dim/3s_wfn.eps}};
   \node (1serr) at (1spot) [xshift=5.6cm,yshift=-3.11cm]
   {\includegraphics[width=0.5\textwidth]{figures/dim/error_3s.eps}};
-  \node (error) at (1spot) [xshift=0cm,yshift=-2.7cm]
-  {$E \sim 10^{-5} $};
-  \node (error) at (1spot) [xshift=0cm,yshift=-3.5cm]
-  {$\langle r\rangle, \langle 1/r \rangle \sim 10^{-1} $};
+  \node (error) at (1spot) [xshift=0cm,yshift=-3.25cm]
+  {$\begin{array}{cc}
+      E & {\Large\color{forestgreen(web)} \checkmark} \\
+      \begin{array}{c}
+        \langle r\rangle \\
+        \langle 1/r \rangle
+      \end{array} & 10^{-1}
+    \end{array}$};
 \end{tikzpicture}
 
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{R--Matrix: Berilio}
+\frametitle{R--Matrix: Be}
 
 \vspace{-0.2cm}
 \begin{figure}
-\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-002.eps} 
+\includegraphics[width=0.45\textwidth]{figures/rmatrix/sig001-002.eps} 
 \hspace{0.3cm}
-\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-003.eps} \\
-\vspace{0.2cm}
-\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-006.eps} 
+\includegraphics[width=0.45\textwidth]{figures/rmatrix/sig001-003.eps} \\
+\vspace{0.1cm}
+\includegraphics[width=0.45\textwidth]{figures/rmatrix/sig001-006.eps} 
 \hspace{0.3cm}
-\includegraphics[width=0.4\textwidth]{figures/rmatrix/sig001-007.eps}
+\includegraphics[width=0.45\textwidth]{figures/rmatrix/sig001-007.eps}
 \end{figure}
 
 \end{frame}
@@ -466,6 +620,20 @@ E_{nl} \, P_{nl}(r) $};
 \begin{frame}
 \frametitle{Conclusiones}
 
+\begin{itemize}[<+-| alert@+>]
+\itemb Estudiamos métodos y herramientas de aprendizaje automatizado
+\vspace{0.2cm}
+\itemb Implementamos estos métodos en problemas de física atómica
+\vspace{0.2cm}
+\begin{itemize}
+  \itemb Método de Inversión Depurada
+\vspace{0.2cm}
+  \itemb Estructura del blanco en R--Matrix
+\end{itemize}
+\itemb El éxito en estos ejemplos sugiere que estos métodos se podrían 
+utilizar en otros problemas del campo
+\vspace{0.2cm}
+\end{itemize}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

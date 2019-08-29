@@ -3,7 +3,7 @@
 
 % packages
 \usepackage{setspace}
-\usepackage{enumitem}
+%\usepackage{enumitem}
 \usepackage{amsmath,amssymb}
 \usepackage{verbatim}
 \usepackage{animate}
@@ -15,7 +15,7 @@
 \usepackage{wrapfig}
 \usepackage{amsmath}
 \usepackage{amssymb}
-\usepackage{xcolor,pict2e}% to allow any radius
+\usepackage{pict2e}% to allow any radius
 \usepackage{caption}
 \usepackage{tikz}
 \usepackage{pgf}
@@ -82,10 +82,6 @@
 \newcommand{\linespaceone}{2}
 
 % font families
-%\newfontfamily{\montserratfont}[Path=fonts/,BoldFont=Montserrat-Bold]{Montserrat-Regular}
-%\newfontfamily{\notosansfont}[Path=fonts/,BoldFont=NotoSans-Bold,ItalicFont=NotoSans-Italic,BoldItalicFont=NotoSans-BoldItalic,SmallCapsFont=AlegreyaSansSC-Regular]{NotoSans-Regular}
-%\newfontfamily{\latolightfont}[Path=fonts/]{Lato-Lig}
-%\newfontfamily{\inconsolatafont}[Path=fonts/]{Inconsolata}
 
 % beamer template changes
 \setbeamertemplate{frametitle}{
@@ -96,10 +92,6 @@
        \fill[fill=green0](-0.3,0.05) rectangle (0,0.9);}
        \color{applegreen}~~\insertframetitle%
 }
-
-%\setmainfont[Ligatures=TeX,Path=fonts/,BoldFont=NotoSans-Bold,ItalicFont=NotoSans-Italic,BoldItalicFont=NotoSans-BoldItalic,SmallCapsFont=AlegreyaSansSC-Regular]{NotoSans-Regular}
-%\setsansfont[Ligatures=TeX,Path=fonts/,BoldFont=NotoSans-Bold,ItalicFont=NotoSans-Italic,BoldItalicFont=NotoSans-BoldItalic,SmallCapsFont=AlegreyaSansSC-Regular]{NotoSans-Regular}
-%\setmonofont[Ligatures=TeX,Path=fonts/,SmallCapsFont=AlegreyaSansSC-Regular]{Inconsolata}
 
 % frame counter
 \newcounter{totalfr}
@@ -138,8 +130,14 @@
 
 \newcommand{\rtarrow}{$\color{colorblue}{\rightarrow}$}
 
+\newcommand{\obullet}{$\color{colorblue}{\bullet}$}
+
 \newcommand{\itemR}{
  \item[\rtarrow]
+}
+
+\newcommand{\itemb}{
+ \item[\obullet]
 }
 
 \newcommand{\framecard}[2][colorgreen]{

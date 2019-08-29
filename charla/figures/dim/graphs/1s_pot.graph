@@ -105,7 +105,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Wed Aug 28 12:01:29 2019"
+@timestamp def "Thu Aug 29 16:33:56 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -155,7 +155,7 @@
 @    world 0.00027, 0, 12.1, 13
 @    stack world 0, 0, 0, 0
 @    znorm 1
-@    view 0.150000, 0.150000, 1.150000, 0.850000
+@    view 0.200000, 0.200000, 1.094118, 0.800000
 @    title ""
 @    title font 0
 @    title size 2.000000
@@ -178,8 +178,8 @@
 @    xaxis  label "r (a.u.)"
 @    xaxis  label layout para
 @    xaxis  label place auto
-@    xaxis  label char size 2.000000
-@    xaxis  label font 0
+@    xaxis  label char size 2.250000
+@    xaxis  label font 4
 @    xaxis  label color 1
 @    xaxis  label place normal
 @    xaxis  tick on
@@ -214,8 +214,8 @@
 @    xaxis  ticklabel start 0.000000
 @    xaxis  ticklabel stop type auto
 @    xaxis  ticklabel stop 0.000000
-@    xaxis  ticklabel char size 1.500000
-@    xaxis  ticklabel font 0
+@    xaxis  ticklabel char size 1.750000
+@    xaxis  ticklabel font 4
 @    xaxis  ticklabel color 1
 @    xaxis  tick place both
 @    xaxis  tick spec type none
@@ -229,8 +229,8 @@
 @    yaxis  label "Z\seff"
 @    yaxis  label layout para
 @    yaxis  label place auto
-@    yaxis  label char size 2.000000
-@    yaxis  label font 0
+@    yaxis  label char size 2.250000
+@    yaxis  label font 4
 @    yaxis  label color 1
 @    yaxis  label place normal
 @    yaxis  tick on
@@ -265,8 +265,8 @@
 @    yaxis  ticklabel start 0.000000
 @    yaxis  ticklabel stop type auto
 @    yaxis  ticklabel stop 0.000000
-@    yaxis  ticklabel char size 1.500000
-@    yaxis  ticklabel font 0
+@    yaxis  ticklabel char size 1.750000
+@    yaxis  ticklabel font 4
 @    yaxis  ticklabel color 1
 @    yaxis  tick place both
 @    yaxis  tick spec type none
@@ -274,14 +274,14 @@
 @    altyaxis  off
 @    legend on
 @    legend loctype view
-@    legend 0.85, 0.77
+@    legend 0.83, 0.75
 @    legend box color 1
 @    legend box pattern 0
 @    legend box linewidth 1.0
 @    legend box linestyle 1
 @    legend box fill color 0
 @    legend box fill pattern 1
-@    legend font 0
+@    legend font 4
 @    legend char size 1.750000
 @    legend color 1
 @    legend length 7
@@ -299,9 +299,9 @@
 @    s0 type xy
 @    s0 symbol 0
 @    s0 symbol size 1.000000
-@    s0 symbol color 18
+@    s0 symbol color 17
 @    s0 symbol pattern 1
-@    s0 symbol fill color 18
+@    s0 symbol fill color 17
 @    s0 symbol fill pattern 0
 @    s0 symbol linewidth 1.0
 @    s0 symbol linestyle 1
@@ -311,7 +311,7 @@
 @    s0 line type 1
 @    s0 line linestyle 3
 @    s0 line linewidth 3.0
-@    s0 line color 18
+@    s0 line color 17
 @    s0 line pattern 1
 @    s0 baseline type 0
 @    s0 baseline off
@@ -333,7 +333,7 @@
 @    s0 avalue offset 0.000000 , 0.000000
 @    s0 errorbar on
 @    s0 errorbar place both
-@    s0 errorbar color 18
+@    s0 errorbar color 17
 @    s0 errorbar pattern 1
 @    s0 errorbar size 1.000000
 @    s0 errorbar linewidth 1.0

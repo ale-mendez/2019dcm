@@ -1,6 +1,6 @@
 # Grace project file
 #
-@version 50125
+@version 50123
 @page size 792, 612
 @page scroll 5%
 @page inout 5%
@@ -33,6 +33,7 @@
 @map font 35 to "NimbusSansL-RegularItalic", "NimbusSansL-RegularItalic"
 @map font 36 to "StandardSymbolsL-Regular", "StandardSymbolsL-Regular"
 @map font 12 to "Symbol", "Symbol"
+@map font 38 to "Symbol-Regular", "Symbol-Regular"
 @map font 2 to "Times-Bold", "Times-Bold"
 @map font 3 to "Times-BoldItalic", "Times-BoldItalic"
 @map font 1 to "Times-Italic", "Times-Italic"
@@ -104,7 +105,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Tue Aug 27 23:30:10 2019"
+@timestamp def "Thu Aug 29 16:32:17 2019"
 @with line
 @    line on
 @    line loctype world
@@ -167,7 +168,7 @@
 @    world -0.25, -0.72, 3.75, 0.02
 @    stack world 0, 0, 0, 0
 @    znorm 1
-@    view 0.150000, 0.150000, 1.150000, 0.850000
+@    view 0.200000, 0.150000, 1.194118, 0.850000
 @    title ""
 @    title font 0
 @    title size 1.500000
@@ -190,8 +191,8 @@
 @    xaxis  label ""
 @    xaxis  label layout para
 @    xaxis  label place auto
-@    xaxis  label char size 1.500000
-@    xaxis  label font 0
+@    xaxis  label char size 2.000000
+@    xaxis  label font 4
 @    xaxis  label color 1
 @    xaxis  label place normal
 @    xaxis  tick off
@@ -226,8 +227,8 @@
 @    xaxis  ticklabel start 0.000000
 @    xaxis  ticklabel stop type auto
 @    xaxis  ticklabel stop 0.000000
-@    xaxis  ticklabel char size 1.250000
-@    xaxis  ticklabel font 0
+@    xaxis  ticklabel char size 1.750000
+@    xaxis  ticklabel font 4
 @    xaxis  ticklabel color 1
 @    xaxis  tick place normal
 @    xaxis  tick spec type both
@@ -239,10 +240,10 @@
 @    xaxis  ticklabel 2, "NIST"
 @    xaxis  tick minor 3, 1
 @    xaxis  tick major 4, 1.75
-@    xaxis  ticklabel 4, "\xl\f{}\s\v{0.3}\h{0.1}nl\N = 1"
+@    xaxis  ticklabel 4, "Sin ajuste"
 @    xaxis  tick minor 5, 2
 @    xaxis  tick major 6, 3
-@    xaxis  ticklabel 6, "Ajuste \xl\f{}\s\v{0.3}\h{0.1}nl\N"
+@    xaxis  ticklabel 6, "Con ajuste"
 @    xaxis  tick minor 7, 3.25
 @    xaxis  tick minor 8, 3.5
 @    yaxis  on
@@ -252,11 +253,12 @@
 @    yaxis  bar color 1
 @    yaxis  bar linestyle 1
 @    yaxis  bar linewidth 1.5
-@    yaxis  label "Energia (Ryd)"
+@    yaxis  label "Energi\h{-0.2}\v{0.125}\x\c\"\C\f{}\h{-0.05}\v{-0.125}a (Ryd)"
 @    yaxis  label layout para
-@    yaxis  label place auto
-@    yaxis  label char size 1.500000
-@    yaxis  label font 0
+@    yaxis  label place spec
+@    yaxis  label place 0.000000, 0.130000
+@    yaxis  label char size 2.000000
+@    yaxis  label font 4
 @    yaxis  label color 1
 @    yaxis  label place normal
 @    yaxis  tick on
@@ -291,8 +293,8 @@
 @    yaxis  ticklabel start 0.000000
 @    yaxis  ticklabel stop type auto
 @    yaxis  ticklabel stop 0.000000
-@    yaxis  ticklabel char size 1.250000
-@    yaxis  ticklabel font 0
+@    yaxis  ticklabel char size 1.500000
+@    yaxis  ticklabel font 4
 @    yaxis  ticklabel color 1
 @    yaxis  tick place normal
 @    yaxis  tick spec type none
@@ -336,7 +338,7 @@
 @    s0 symbol skip 0
 @    s0 line type 4
 @    s0 line linestyle 1
-@    s0 line linewidth 2.5
+@    s0 line linewidth 3.5
 @    s0 line color 1
 @    s0 line pattern 1
 @    s0 baseline type 0
@@ -374,9 +376,9 @@
 @    s1 type xy
 @    s1 symbol 0
 @    s1 symbol size 1.000000
-@    s1 symbol color 24
+@    s1 symbol color 17
 @    s1 symbol pattern 1
-@    s1 symbol fill color 24
+@    s1 symbol fill color 17
 @    s1 symbol fill pattern 0
 @    s1 symbol linewidth 1.0
 @    s1 symbol linestyle 1
@@ -385,8 +387,8 @@
 @    s1 symbol skip 0
 @    s1 line type 4
 @    s1 line linestyle 1
-@    s1 line linewidth 2.5
-@    s1 line color 24
+@    s1 line linewidth 3.5
+@    s1 line color 17
 @    s1 line pattern 1
 @    s1 baseline type 0
 @    s1 baseline off
@@ -408,7 +410,7 @@
 @    s1 avalue offset 0.000000 , 0.000000
 @    s1 errorbar on
 @    s1 errorbar place both
-@    s1 errorbar color 24
+@    s1 errorbar color 17
 @    s1 errorbar pattern 1
 @    s1 errorbar size 1.000000
 @    s1 errorbar linewidth 1.0
@@ -434,7 +436,7 @@
 @    s2 symbol skip 0
 @    s2 line type 4
 @    s2 line linestyle 1
-@    s2 line linewidth 2.5
+@    s2 line linewidth 3.5
 @    s2 line color 16
 @    s2 line pattern 1
 @    s2 baseline type 0
