@@ -30,7 +30,7 @@ en problemas colisionales}}
 \newcommand{\myemail}{\setnote{\color{darkgray}\scriptsize 
 alemendez@iafe.uba.ar}}
 \newcommand{\myDetails}{\setnote{\color{darkgray}\small 
-1 de Septiembre -- Buenos Aires}}
+2 de Septiembre -- Buenos Aires}}
 
 % colors: black, blue, brown, cyan, darkgray, gray, green, 
 % lightgray, lime, magenta, olive, orange, pink, purple, red, teal, 
@@ -49,7 +49,6 @@ alemendez@iafe.uba.ar}}
 \noindent\makebox[\linewidth]{\rule{0.85\paperwidth}{0.7pt}}
 \vfill
 
-% \vspace{0.5cm}
 \hspace{2.75cm}\text{\color{teal}{\normalsize Alejandra Mendez,}} \\
 \hspace{2.75cm}\text{\color{teal}{\normalsize Juan Di Filippo,}} \\
 \hspace{2.75cm}\text{\color{teal}{\normalsize Sebasti\'an L\'opez,}} \\
@@ -79,15 +78,19 @@ alemendez@iafe.uba.ar}}
 \text{\huge\bf Learning}}
  \end{textblock}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\framepic[1.]{figures/ionization.png}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framepic[1.]{figures/ionization.png}{}
+\framecard[colororange]{{\color{white}
+{\Huge \bf Problema 1:} 
+\\ \vspace{0.5cm} 
+{\LARGE \bf Potenciales DIM}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{DIM}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Método de Inversión Depurada (DIM)}
 
-\vspace{-1.5cm}
+\vspace{-2cm}
 \begin{equation*}
 \tikzmarkin[draw=darkgray,fill=darkgray!10]{potencial}(0.2,-0.3)(-0.1,0.65)
 T_{fi} = \big| \langle \psi_f |  V 
@@ -95,26 +98,33 @@ T_{fi} = \big| \langle \psi_f |  V
 \tikzmarkend{potencial}
 \end{equation*}
 \begin{tikzpicture}[remember picture, overlay,
-  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=3cm,
+  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=2.5cm,
   minimum width=1.2cm, minimum height=0.7cm, text centered},
   arrow/.style={red,ultra thick,->,>=latex}
   ]
-\node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{orange-red}{¿Cómo obtener V?}};
+\node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{red}{¿Cómo obtener V?}};
 \draw<2->[arrow, bend right=30, dashed] ([xshift=0cm,yshift=0cm]{potexp.west}) to
          ([xshift=2.5cm,yshift=-0.2cm]{potencial});  
-\node<3> (schro) at (5cm,-1cm)
+\node<3-> (schro) at (5cm,-1cm)
 {$ \left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
-+ V_{nl}(r) \right] \, P_{nl}(r) = 
++ {\color{red}V_{nl}(r)} \right] \, P_{nl}(r) = 
 E_{nl} \, P_{nl}(r) $};
-\node<4-> (schro) at (5cm,-1cm)
-{$ \left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
-- \frac{Z_{nl}(r)}{r} \right] \, P_{nl}(r) = 
-E_{nl} \, P_{nl}(r) $};
-\node<5-> (znl) at (5cm,-2.5cm)
-{$ Z_{nl}(r) = -\frac{1}{2} 
-\frac{P_{nl}''(r)}{ P_{nl}(r)} \,r
-+ \frac{l(l+1)}{2 r} - E_{nl} \,r $};
+\node<4> (znl) at (5cm,-2.5cm)
+{${\color{red}V_{nl}(r)}=\frac{1}{2}\frac{P_{nl}''(r)}{P_{nl}(r)}-\frac{l(l+1)}{2 r^2}
++E_{nl}$};
 \end{tikzpicture}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Método de Inversión Depurada (DIM)}
+
+\begin{equation*}
+ V(r) = -\frac{Z(r)}{r} 
+\end{equation*}
+\begin{figure}
+  \includegraphics[width=0.65\textwidth]{figures/dim/effcharge.eps}
+\end{figure}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -125,8 +135,8 @@ E_{nl} \, P_{nl}(r) $};
 \begin{tikzpicture}
   \node (img1) 
   {\includegraphics[width=0.95\textwidth]{figures/dim/wavefun2sKr.pdf}};
-%  \node<1-> (eq1) at (img1) [yshift=1.4cm,xshift=1.5cm]
-%  {$Z(r) = -\frac{1}{2} \frac{P''(r)}{P(r)} \,r  - E \, r$}; 
+  \node<1-> (eq1) at (img1) [yshift=1.4cm,xshift=1.5cm]
+  {$Z(r) = -\frac{1}{2} \frac{P''(r)}{P(r)} \,r  - E \, r$}; 
   \node (eq2) at (img1) [yshift=3cm,xshift=4cm] 
   {{\normalsize $2s$ Kr}}; 
   \node<2-> (img2) at (img1.west) [xshift=2cm,yshift=-2.25cm]
@@ -141,26 +151,34 @@ E_{nl} \, P_{nl}(r) $};
 \frametitle{Depuraci\'on}
 
 \begin{tikzpicture}[remember picture,overlay]
-  \tikzset{shift={(current page.center)}}%xshift=-1.5cm,yshift=0cm}
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=0.25cm}
   \node (img1) 
   {\includegraphics[width=0.7\textwidth]{figures/dim/depuration2sN-a.eps}};
   \node (name) at (img1) [yshift=2.9cm,xshift=2.8cm] 
   {$2s$ N};
-  \node<3-> (eq1) at (img1) [yshift=-3.5cm,xshift=0cm]
-  {$\tikzmarkin[draw=orange,fill=orange!10]{depuration}(0.2,-0.5)(-0.1,0.65)
-   Z(r) = 1+\sum_{j} \alpha_j e^{-\beta_j r} 
-   \tikzmarkend{depuration}$};
+  \node<3-> (eq1) at (img1) [yshift=-3.4cm,xshift=0cm]
+  {\begin{minipage}{0.50\textwidth}
+     \begin{equation*}
+       \tikzmarkin[draw=orange,fill=orange!10]{depuration}(0.21,-0.75)(-0.1,0.65)
+        Z(r) = 1+\sum_{j} \alpha_j e^{-\beta_j r} 
+       \tikzmarkend{depuration}
+     \end{equation*}
+   \end{minipage}};
   \node<3-> (img2) 
   {\includegraphics[width=0.7\textwidth]{figures/dim/depuration2sN-b.eps}};
   \node<2-> (asym) at (img1) [yshift=0cm,xshift=-1.1cm]
   { {\small $\Bigg\{ \!\! \begin{array}{c}
   \!\!\!\!Z_N :\, r=0 \\ 
   \,1 \,\,\,:\, r\rightarrow \infty\\ \end{array} $ } };
-  \node<4-> (eq1) at (img1) [yshift=-3.5cm,xshift=0cm]
-  {$\tikzmarkin[draw=orange,fill=orange!10]{depuration}(0.21,-0.5)(-0.1,0.65)
-   Z(r) = 1+\sum_{j} {\color{orange}{\mathbf{\boldsymbol\alpha_j}}} 
+  \node<4-> (eq1) at (img1) [yshift=-3.4cm,xshift=0cm]
+  {\begin{minipage}{0.50\textwidth}
+     \begin{equation*}
+       \tikzmarkin[draw=orange,fill=orange!10]{depuration}(0.21,-0.75)(-0.1,0.65)
+       Z(r) = 1+\sum_{j} {\color{orange}{\mathbf{\boldsymbol\alpha_j}}} 
           e^{-{\color{orange}{\mathbf{\boldsymbol\beta_j}}} r} 
-   \tikzmarkend{depuration}$};
+       \tikzmarkend{depuration}
+     \end{equation*}
+   \end{minipage}};
 \end{tikzpicture}
 
 \end{frame}
@@ -181,7 +199,7 @@ E_{nl} \, P_{nl}(r) $};
   \node[expl1,text width=3.1cm] (diag) at (var) [xshift=2.5cm,yshift=-2cm]
   {Diagonalización};
   \node[expl1,text width=3.3cm] (err) at (var) [xshift=-2.5cm,yshift=-2cm]
-  {Calculo de error};
+  {Cálculo de error};
   \draw [arrow, bend right=0] 
   ([xshift=0cm,yshift=0cm]{inv}) to ([xshift=0cm,yshift=0cm]{rem.north});
   \draw [arrow, bend right=0] 
@@ -197,6 +215,11 @@ E_{nl} \, P_{nl}(r) $};
 \end{tikzpicture}
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\framecard[colororange]{{\color{white}
+{\Huge \bf Problema 2:} 
+\\ \vspace{0.5cm} 
+{\LARGE \bf R--Matrix}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{R--Matrix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
