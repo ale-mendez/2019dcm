@@ -1,62 +1,155 @@
-todos sabemos los desarrollos de inteligenci artificial y aprendizaje automatizado
-a principio de siglo si uno entraba en NERSC, la física atomica estaba presente en 
-los calculos más sofisticados 
-tecnicas computaciones de avanzada
-hoy en día la frontera computacional está dada por ML y AI
-la pregunta es ¿podemos extraer estos conocimientos en nuestro campo de trabajo?
-comunidad abierta, de codigos compartidos
 
-Potenciales efectivos 
-(DIM)
+cosas para hacer:
 
-4)
+Slide 1: Machine learning
+Slide 10: Figura R-Matrix
+Slide 18: Cambiar rango de la función para mostrar solo 2 mínimos
+          Fijar el prior como un solo punto (cambiar kernel)
 
-Sacar potencial V, poner operador
+########################################################################
 
-Estamos habituados
-El problema que nosotros gralmente resolvemos es, conocido el potencial, queremos 
-conocer la solucion. Nosotros planteamos el problema inverso.
-Porque una vez que tenemos el potencial correspondiente al estado ligado podemos
-conocer el estado continuo correspondinte.
+Todos sabemos los grandes avances y desarrollos en el campo de la 
+inteligencia artificial y aprendizaje automatizado (machine learning).
 
-5)
-poner Znl
-poner Z_N en vez de 6
+A principio de siglo, la física atómica supo estar a la vanguardia en 
+la implementación los métodos y herramientas computacionales 
+sofisticados tales como la computación en paralelo. Si uno revisaba 
+veia la lista de proyectos en centros computaciones tales como NERSC 
+podía encontrar siempre trabajos relacionados a la física atómica.
 
-el potencial que encontramos tiene una forma coulombiana por lo que es conveniente
-ajustarlos asi
- salvo que la carga es una
-carga efectiva
+Hoy en día la frontera computacional está dada por AI y ML. 
 
+Una característica particular de la comunidad de ML es que es una 
+comunidad dinámica, de codigos compartidos, lo que hace que el estudio
+de los distintos métodos y su implementación sea amigable.
 
-6) poner V y sacar r
+La pregunta que nos hacemos nosotros es ¿podemos extraer estos 
+conocimientos e implementarlos en nuestro campo de trabajo? 
 
-8)
+Para responder esta pregunta planteamos dos problemas específicos
+de nuestra área. 
 
-diag -> energias valores medios -> costo -> variar parámetros, eventualmente
-no es sistematizable
-que requiere experiencia y esa experiencia no es transmitible
-es casi artesanal
-a una persona le sale y a otra no
+########################################################################
 
-9) Calculos colisionales (R-matrix)
+El primero tiene que ver con la obtención de potenciales efectivos.
 
-10) no voy a explicar r-matrix. es un metodo sotisticado y constituyen el estado del arte
+########################################################################
 
-requieren recursos computacionales significativos
+Determinar el potencial que describe a un blanco en un proceso colisional
+es ideal, porque una vez que tenemos el potencial correspondiente al 
+estado ligado podemos conocer el estado continuo respectivo. 
 
-solo voy a descatar que es una suite de programas
-todos paralelizados, 
+########################################################################
 
-para iniciar el calculo es  necesario describir el blanco
+Sin embargo, el problema que generalmente resolvemos es dado un potencial, 
+determinamos los autovalores y autovectores que describen al sistema.
+El método de inversión depurada fue desarrollado con la premisa de 
+invertir este problema. Esto sería, dada las soluciones, conocer el 
+potencial que las genera.
 
-rehacer la imagen de rmatrix sin boundary surface 
+La inversión directa de esta ecuación nos permite determinar potenciales
+orbitales efectivos dada cualquier solución. Nosotros utilizamos soluciones
+de Hartree-Fock.
 
+Los potenciales que encontramos tienen una forma coulombiana, por lo que 
+es conveniente describirlos a través de una carga efectiva. 
+Esta carga efectiva deberá cumplir dos condiciones asintóticas, en el
+origen la carga es igual a la carga nuclear y lejos del núcleo, debido 
+a el apantallamiento electrónico, la carga es igual a 1.
 
-11) 
-\Psi_i = sum_j \Phi_j
+########################################################################
 
-N -> Configuraciones
+Sin embargo, a pesar de que inversión es directa, las cargas efectivas
+invertidas presentan serios problemas numéricos. 
+
+Los nodos de las funciones de onda, como por ejemplo el del orbital 
+2s del Kr, se traslada en la carga efectiva como un polo debido a la
+función de onda en el denominador.
+
+De la misma manera, debido al decaimiento exponencial de los orbitales
+la carga invertida diverge lejos del núcleo. 
+
+########################################################################
+
+Para lidear con estos problemas, planteamos un esquema de depuración.
+El átomo de N muestra los mismos problemas que les comentaba recién: 
+polo y divergencia. El método consiste en primer lugar en remover las 
+regiones en las que la carga tiene comportamientos no físicos. 
+En segundo lugar, se impone las correctas condiciones asintóticas a
+través de una función analítica paramétrica. Luego, los parámetros se
+ajustan de manera tal que las soluciones de dicha carga, dicho potencial,
+sean iguales a las originales. 
+
+########################################################################
+
+El procedimiento de depuración consiste entonces en:
+
+- La inversión directa numérica del potencial.
+- Removemos las divergencias en las cargas invertidas que presentan 
+caracterísiticas no físicas. 
+- Inicializamos los parámetros de ajuste que definen el potencial analítico.
+- Resolvemos el problema diagonalizando el potencial y obtenemos las 
+energías orbitales y los valores medios de las funciones de onda.
+- Con estos valores calculamos una función de costo que queda determinada 
+por los errores relativos entre las soluciones obtenidas con el potencial
+ajustado y las originales.
+- Si el error es muy grande, volvemos a variar los parámetros y el proceso
+se repite. 
+
+En muchos casos ocurre que la región sobre la cual ajustamos la función
+analítica del potencial no es la apropiada y tenemos que volver a 
+definir una nueva región, ampliando o reduciendo las zonas de divergencias
+ha ser removidas. Y el proceso vuelve a empezar.
+
+Como se habrán dado cuenta este procedimiento es terriblemente no 
+sistematizable. Por otro lado, tanto la definición de las zonas ha ser
+removidas como la dirección de variación de los parámetros en el hiperespacio 
+de parámetros requiere experiencia y esta experiencia no es transmitible.
+Uno podría decir que este procedimiento es hasta cierto punto artesanal,
+a una persona le sale y a otra no.
+
+########################################################################
+
+El segundo problema tiene que ver directamente con los cálculos colisionales.
+Particularmente con el cálculo de secciones eficaces de excitación por
+impacto de electrón.
+
+########################################################################
+
+No voy a explicar R-Matrix, no solo porque no tengo tiempo sino porque
+no es el punto de mi charla. Sólo voy a destacar, y creo que todos y todas
+lo sabemos, es que R-Matrix es un método sofisticado que constituye el
+estado del arte. 
+
+El cálculo de excitación por impacto de electrón se realiza con una 
+suite de programas, todos paralelizados, que demanda recursos 
+computacionales significativos. 
+
+Para iniciar el calculo es necesario describir de forma correcta el blanco.
+
+Luego, se resuelve lo que se conoce como la región interna, en donde se
+considera la interacción entre el electrón incidente y el blanco, exchange
+y polarización.
+
+Y finalmente se resuelve la región externa donde sólo se toman en cuenta
+los potenciales de largo alcance. 
+
+==>> ((((rehacer la imagen de rmatrix sin boundary surface))))
+
+El cálculo de secciones eficaces utilizando este método puede llevar
+meses, desde la preparación del blanco hasta la correcta obtención de 
+convergencia en el cálculo propiamente dicho. 
+
+########################################################################
+
+Sin lugar a dudas, una de las partes más difíciles del cálculo está
+dado por la descripción del blanco. 
+
+En general, los estados del átomo o ión son descritos como una combinación 
+lineal de estados base a partir del método de interacción de configuraciones
+(configuration interaction).
+
+Las funciones base que componen esta combinación están dados por funciones
 
 explicar que N no es un número sino qué configuraciones, que depende de
 
@@ -65,26 +158,29 @@ cada una de estas funciones dependen las funciones base estan da
 estas funciones se construyen a partir de funciones base que se obtienen 
 resolviendo potenciale modelo
 
+########################################################################
+
 12) Dependencia de CI (N)
 
 Transicipon prohibida
-2s^2 en titulo de fig
 
 
+########################################################################
 
 13) Dependencia de orbitales (\lambda)
 
 Transción permitida
 
-2s^2 2s2p
-
-Fit CCC -> Ref. 
+########################################################################
 
 14)
 
 Costo con el espectro
 Explicar el cálculo diciendo que se tiene que llegar hasta el final de calculo de
 rmatrix para chequear que la secciones eficaces esten bien descritas
+
+
+########################################################################
 
 15) 
 
@@ -101,28 +197,35 @@ dim: remocion de nodos -> no tiene expresion analitica, conlleva toma de decisio
 
 rmatrix: definir las configuraciones, correr rmatrix -> 
 
+
+########################################################################
+
 16)
 no voy a explicar la teoria, les voy a omstrar rapidamente con un ejemplo
 
+
+
+########################################################################
 
 18)
 
 exploracion/explotacion
 
-20) 10^{-2}%
+########################################################################
+
+20) 
 resultados excelentes
 no solo para el estado fundamental
 
-21) 
 
-CCC-> Ref
+########################################################################
 
 
-22)
+########################################################################
+
 
 
 24) como los que seguramente ustedes tienen
 
 se podría implementar 
 
-campo -> area
