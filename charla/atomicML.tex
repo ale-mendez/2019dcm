@@ -30,7 +30,7 @@ en problemas colisionales}}
 \newcommand{\myemail}{\setnote{\color{darkgray}\scriptsize 
 alemendez@iafe.uba.ar}}
 \newcommand{\myDetails}{\setnote{\color{darkgray}\small 
-2 de Septiembre -- Buenos Aires}}
+3 de Septiembre -- Buenos Aires}}
 
 % colors: black, blue, brown, cyan, darkgray, gray, green, 
 % lightgray, lime, magenta, olive, orange, pink, purple, red, teal, 
@@ -78,53 +78,73 @@ alemendez@iafe.uba.ar}}
 \text{\huge\bf Learning}}
  \end{textblock}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\framepic[1.]{figures/ionization.png}{}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framecard[colorblue]{{\color{white}
-{\Huge \bf Problema 1:} 
-\\ \vspace{0.5cm} 
-{\LARGE \bf Potenciales DIM}}}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{DIM}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}
-\frametitle{Método de Inversión Depurada (DIM)}
-
-\vspace{-2cm}
-\begin{equation*}
-\tikzmarkin[draw=darkgray,fill=darkgray!10]{potencial}(0.2,-0.3)(-0.1,0.65)
-T_{fi} = \big| \langle \psi_f |  V 
-| \psi_i \rangle \big|^2 
-\tikzmarkend{potencial}
-\end{equation*}
-\begin{tikzpicture}[remember picture, overlay,
-  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=2.5cm,
-  minimum width=1.2cm, minimum height=0.7cm, text centered},
-  arrow/.style={red,ultra thick,->,>=latex}
-  ]
-\node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{red}{¿Cómo obtener V?}};
-\draw<2->[arrow, bend right=30, dashed] ([xshift=0cm,yshift=0cm]{potexp.west}) to
-         ([xshift=2.5cm,yshift=-0.2cm]{potencial});  
-\node<3-> (schro) at (5cm,-1cm)
-{$ \left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
-+ {\color{red}V_{nl}(r)} \right] \, P_{nl}(r) = 
-E_{nl} \, P_{nl}(r) $};
-\node<4> (znl) at (5cm,-2.5cm)
-{${\color{red}V_{nl}(r)}=\frac{1}{2}\frac{P_{nl}''(r)}{P_{nl}(r)}-\frac{l(l+1)}{2 r^2}
-+E_{nl}$};
-\end{tikzpicture}
-
-\end{frame}
+\framecard[orange(colorwheel)]{{\color{white}
+{\Huge \bf Problema 1:} 
+\\ \vspace{0.5cm} 
+{\LARGE \bf Potenciales efectivos \\\vspace{0.25cm} (DIM)}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\framepic[1.]{figures/ionization.png}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Método de Inversión Depurada (DIM)}
 
-\begin{equation*}
- V(r) = -\frac{Z(r)}{r} 
-\end{equation*}
-\begin{figure}
-  \includegraphics[width=0.65\textwidth]{figures/dim/effcharge.eps}
-\end{figure}
+%\vspace{-2cm}
+%\begin{equation*}
+%\tikzmarkin[draw=darkgray,fill=darkgray!10]{potencial}(0.2,-0.3)(-0.1,0.65)
+%T_{fi} = \big| \langle \psi_f |  V 
+%| \psi_i \rangle \big|^2 
+%\tikzmarkend{potencial}
+%\end{equation*}
+
+%\begin{tikzpicture}[remember picture, overlay,
+%  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=2.5cm,
+%  minimum width=1.2cm, minimum height=0.7cm, text centered},
+%  arrow/.style={red,ultra thick,->,>=latex}
+%  ]
+%\node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{red}{¿Cómo obtener V?}};
+%\draw<2->[arrow, bend right=30, dashed] ([xshift=0cm,yshift=0cm]{potexp.west}) to
+%         ([xshift=2.5cm,yshift=-0.2cm]{potencial});  
+%\node<3-> (schro) at (5cm,-1cm)
+%{$ \left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
+%+ {\color{red}V_{nl}(r)} \right] \, P_{nl}(r) = 
+%E_{nl} \, P_{nl}(r) $};
+%\node<4> (znl) at (5cm,-2.5cm)
+%{${\color{red}V_{nl}(r)}=\frac{1}{2}\frac{P_{nl}''(r)}{P_{nl}(r)}-\frac{l(l+1)}{2 r^2}
+%+E_{nl}$};
+%\end{tikzpicture}
+
+\begin{tikzpicture}[remember picture, overlay]
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=2.4cm}
+  \node<1-> (schro) 
+  {\begin{minipage}{\textwidth}
+\begin{center}
+     $\left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
+      + {\color{red}V_{nl}(r)} \right] \, P_{nl}(r) = 
+      E_{nl} \, P_{nl}(r)$
+\end{center}
+   \end{minipage}};
+  \node<2-> (znl) at (schro) [xshift=0cm,yshift=-1.5cm]
+  {\begin{minipage}{\textwidth}
+     \begin{equation*}
+      {\color{red}V_{nl}(r)} = \frac{1}{2}\frac{P_{nl}''(r)}{P_{nl}(r)}
+          -\frac{l(l+1)}{2 r^2} +E_{nl}
+     \end{equation*}
+   \end{minipage}};
+  \node<3-> (coulomb) at (znl) [xshift=-1.9cm,yshift=-3cm]
+  {\begin{minipage}{0.55\textwidth}
+      \begin{figure}
+        \includegraphics[width=\textwidth]{figures/dim/effcharge.eps}
+      \end{figure}
+   \end{minipage}};
+  \node<3-> (coulomb) at (znl) [xshift=3.1cm,yshift=-2.5cm]
+  {\begin{minipage}{0.5\textwidth}
+      \begin{equation*}
+       V(r) = -\frac{{\color{red}Z(r)}}{r} 
+      \end{equation*}
+   \end{minipage}};
+\end{tikzpicture}
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,7 +157,7 @@ E_{nl} \, P_{nl}(r) $};
   \node (img1) 
   {\includegraphics[width=0.95\textwidth]{figures/dim/wavefun2sKr.eps}};
   \node<1-> (eq1) at (img1) [yshift=1.4cm,xshift=1.5cm]
-  {$Z(r) = -\frac{1}{2} \frac{P''(r)}{P(r)} \,r  - E \, r$}; 
+  {$V(r) = \frac{1}{2} \frac{P''(r)}{P(r)} + E $}; 
   \node[draw,circle,minimum size=1cm,inner sep=0pt] (eq2) at (img1) [yshift=3.25cm,xshift=4.5cm] 
   {Kr}; 
   \node<2-> (img2) at (img1.west) [xshift=2cm,yshift=-2.5cm]
@@ -217,7 +237,7 @@ E_{nl} \, P_{nl}(r) $};
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framecard[orange(colorwheel)]{{\color{white}
+\framecard[colorblue]{{\color{white}
 {\Huge \bf Problema 2:} 
 \\ \vspace{0.5cm} 
 {\LARGE \bf R--Matrix}}}
@@ -267,11 +287,11 @@ E_{nl} \, P_{nl}(r) $};
   \node (eqCI) 
   {\begin{minipage}{0.50\textwidth}
      \begin{equation*}
-       \Phi_i(\mathbf{r}) =
+       \Psi_i(\mathbf{r}) =
        \sum_j^{\tikzmarkin[draw=orange,fill=orange!10]{N}(0.1,-0.1)(-0.1,0.33)
         N
        \tikzmarkend{N}}
-       c_{ji} \, P_j(r) Y_j(\hat{r})
+       c_{ji} \, \Phi(\mathbf{r})
      \end{equation*}
    \end{minipage}};
 %  \node (name) at (eqCI) [xshift=4.35cm,yshift=-0.2cm]
@@ -279,8 +299,8 @@ E_{nl} \, P_{nl}(r) $};
 %     \mbox{\small\it Configuration} \\
 %     \mbox{\small\it interaction}
 %   \end{array}$};
-  \node (nconf) at (eqCI) [xshift=3.5cm,yshift=1cm]
-  {\small\it Número de configuraciones};
+  \node (nconf) at (eqCI) [xshift=3.cm,yshift=1cm]
+  {\small\it Configuraciones};
   \draw [arrow, bend right=-30] 
   ([xshift=0.2cm,yshift=0cm]{N.east}) to ([xshift=0.1cm,yshift=0.1cm]{nconf.west});
 %%
@@ -313,7 +333,7 @@ E_{nl} \, P_{nl}(r) $};
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Influencia de $N$}
+\frametitle{Dependencia de config. ($N$)}
 
 \begin{tikzpicture}[remember picture,overlay]
   \tikzset{shift={(current page.center)},xshift=1cm,yshift=-0.5cm}
@@ -334,7 +354,7 @@ E_{nl} \, P_{nl}(r) $};
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Influencia de $\lambda_{nl}$}
+\frametitle{Dependencia de orbitales ($\lambda_{nl}$)}
 
 \begin{tikzpicture}[remember picture,overlay]
   \tikzset{shift={(current page.center)},xshift=0cm,yshift=0cm}
@@ -492,7 +512,7 @@ E_{nl} \, P_{nl}(r) $};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Procesos Gaussianos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framecard[colorblue]{{\color{white}
+\framecard[orange(colorwheel)]{{\color{white}
 {\LARGE \bf Optimización Bayesiana} 
 \\ \vspace{0.5cm} 
 {\Large \bf con Procesos Gaussianos}}}
@@ -521,7 +541,7 @@ E_{nl} \, P_{nl}(r) $};
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Resultados}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framecard[orange(colorwheel)]{\color{white}
+\framecard[colorgreen]{\color{white}
 \LARGE \bf Resultados}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
@@ -631,7 +651,7 @@ E_{nl} \, P_{nl}(r) $};
   \itemb Estructura del blanco en R--Matrix
 \end{itemize}
 \itemb El éxito en estos ejemplos sugiere que estos métodos se podrían 
-utilizar en otros problemas del campo
+utilizar en otros problemas del área
 \vspace{0.2cm}
 \end{itemize}
 

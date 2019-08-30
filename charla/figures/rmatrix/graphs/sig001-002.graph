@@ -105,7 +105,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Thu Aug 29 17:10:05 2019"
+@timestamp def "Thu Aug 29 20:03:46 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -345,7 +345,7 @@
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
 @    s0 comment "/home/ale/icft_results/be0+/Dipti_NIST/dipti_sigma001-002.dat"
-@    s0 legend  "Fit CCC"
+@    s0 legend  "Ref."
 @    s1 hidden false
 @    s1 type xy
 @    s1 symbol 0

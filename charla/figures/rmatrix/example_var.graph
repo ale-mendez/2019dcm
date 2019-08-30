@@ -105,7 +105,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Thu Aug 29 16:55:01 2019"
+@timestamp def "Thu Aug 29 20:05:13 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -160,7 +160,7 @@
 @    title font 0
 @    title size 1.500000
 @    title color 1
-@    subtitle "2s \S\v{-0.3}1\NS - 2p \S\v{-0.3}1\NP"
+@    subtitle "2s\S\v{-0.3}2 1\NS - 2s2p \S\v{-0.3}1\NP"
 @    subtitle font 5
 @    subtitle size 2.000000
 @    subtitle color 1
@@ -344,7 +344,7 @@
 @    s0 errorbar riser clip off
 @    s0 errorbar riser clip length 0.100000
 @    s0 comment "/home/ale/icft_results/be0+/Dipti_NIST/dipti_sigma001-003.dat"
-@    s0 legend  "Fit CCC"
+@    s0 legend  "Ref."
 @    s1 hidden false
 @    s1 type xy
 @    s1 symbol 0

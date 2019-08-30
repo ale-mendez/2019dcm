@@ -105,7 +105,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Thu Aug 29 16:54:51 2019"
+@timestamp def "Thu Aug 29 20:04:41 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -160,7 +160,7 @@
 @    title font 0
 @    title size 1.750000
 @    title color 1
-@    subtitle "2s \S\v{-0.3}1\NS - 2s3p\S\v{-0.3} 3\NP"
+@    subtitle "2s\S\v{-0.3}2 1\NS - 2s3p\S\v{-0.3} 3\NP"
 @    subtitle font 5
 @    subtitle size 2.000000
 @    subtitle color 1

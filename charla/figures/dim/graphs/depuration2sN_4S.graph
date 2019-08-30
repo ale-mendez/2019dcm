@@ -104,7 +104,7 @@
 @timestamp rot 0
 @timestamp font 0
 @timestamp char size 1.000000
-@timestamp def "Thu Aug 29 16:30:03 2019"
+@timestamp def "Thu Aug 29 20:44:35 2019"
 @r0 off
 @link r0 to g0
 @r0 type above
@@ -344,7 +344,7 @@
 @    s0 errorbar riser clip length 0.100000
 @    s0 comment "/home/ale/nemesis/potenciales/results/atomsfischer/N/4S/invcharge/zinv002.dat"
 @    s0 legend  ""
-@    s1 hidden true
+@    s1 hidden false
 @    s1 type xy
 @    s1 symbol 0
 @    s1 symbol size 1.000000
