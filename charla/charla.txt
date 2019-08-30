@@ -1,0 +1,128 @@
+todos sabemos los desarrollos de inteligenci artificial y aprendizaje automatizado
+a principio de siglo si uno entraba en NERSC, la física atomica estaba presente en 
+los calculos más sofisticados 
+tecnicas computaciones de avanzada
+hoy en día la frontera computacional está dada por ML y AI
+la pregunta es ¿podemos extraer estos conocimientos en nuestro campo de trabajo?
+comunidad abierta, de codigos compartidos
+
+Potenciales efectivos 
+(DIM)
+
+4)
+
+Sacar potencial V, poner operador
+
+Estamos habituados
+El problema que nosotros gralmente resolvemos es, conocido el potencial, queremos 
+conocer la solucion. Nosotros planteamos el problema inverso.
+Porque una vez que tenemos el potencial correspondiente al estado ligado podemos
+conocer el estado continuo correspondinte.
+
+5)
+poner Znl
+poner Z_N en vez de 6
+
+el potencial que encontramos tiene una forma coulombiana por lo que es conveniente
+ajustarlos asi
+ salvo que la carga es una
+carga efectiva
+
+
+6) poner V y sacar r
+
+8)
+
+diag -> energias valores medios -> costo -> variar parámetros, eventualmente
+no es sistematizable
+que requiere experiencia y esa experiencia no es transmitible
+es casi artesanal
+a una persona le sale y a otra no
+
+9) Calculos colisionales (R-matrix)
+
+10) no voy a explicar r-matrix. es un metodo sotisticado y constituyen el estado del arte
+
+requieren recursos computacionales significativos
+
+solo voy a descatar que es una suite de programas
+todos paralelizados, 
+
+para iniciar el calculo es  necesario describir el blanco
+
+rehacer la imagen de rmatrix sin boundary surface 
+
+
+11) 
+\Psi_i = sum_j \Phi_j
+
+N -> Configuraciones
+
+explicar que N no es un número sino qué configuraciones, que depende de
+
+cada una de estas funciones dependen las funciones base estan da
+
+estas funciones se construyen a partir de funciones base que se obtienen 
+resolviendo potenciale modelo
+
+12) Dependencia de CI (N)
+
+Transicipon prohibida
+2s^2 en titulo de fig
+
+
+
+13) Dependencia de orbitales (\lambda)
+
+Transción permitida
+
+2s^2 2s2p
+
+Fit CCC -> Ref. 
+
+14)
+
+Costo con el espectro
+Explicar el cálculo diciendo que se tiene que llegar hasta el final de calculo de
+rmatrix para chequear que la secciones eficaces esten bien descritas
+
+15) 
+
+estos dos problemas son diferentes pero tienen similitud -> costo
+el calculo depende de parametros,
+sin embargo no es una simple minimizacion variando parametros
+
+no es posuble mapear el espacio de configuraciones
+
+minimos locales
+
+
+dim: remocion de nodos -> no tiene expresion analitica, conlleva toma de decisiones
+
+rmatrix: definir las configuraciones, correr rmatrix -> 
+
+16)
+no voy a explicar la teoria, les voy a omstrar rapidamente con un ejemplo
+
+
+18)
+
+exploracion/explotacion
+
+20) 10^{-2}%
+resultados excelentes
+no solo para el estado fundamental
+
+21) 
+
+CCC-> Ref
+
+
+22)
+
+
+24) como los que seguramente ustedes tienen
+
+se podría implementar 
+
+campo -> area
