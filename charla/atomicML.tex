@@ -219,8 +219,8 @@ alemendez@iafe.uba.ar}}
   {Variación de parámetros};
   \node[expl1,text width=3.1cm] (diag) at (var) [xshift=2.5cm,yshift=-2cm]
   {Diagonalización};
-  \node[expl1,text width=3.3cm] (err) at (var) [xshift=-2.5cm,yshift=-2cm]
-  {Cálculo de error};
+  \node[expl1,text width=3.4cm] (err) at (var) [xshift=-2.5cm,yshift=-2cm]
+  {Cálculo de costo};
   \draw [arrow, bend right=0] 
   ([xshift=0cm,yshift=0cm]{inv}) to ([xshift=0cm,yshift=0cm]{rem.north});
   \draw [arrow, bend right=0] 
@@ -249,24 +249,42 @@ alemendez@iafe.uba.ar}}
 \frametitle{R--Matrix}
 
 \begin{columns}
-\begin{column}{0.55\textwidth}
-\begin{center}
-\begin{figure}
-\includegraphics[width=\textwidth]{figures/rmatrix/regions.png}
-\end{figure}
-\end{center}
+\begin{column}{0.65\textwidth}
+
+\begin{tikzpicture}[thick]
+\tikzset{shift={(current page.center)},xshift=-2cm,yshift=0cm}
+\node at (0,-0.65) {\footnotesize
+$\begin{array}{c}\mbox{\it Núcleo del} \\ \mbox{\it blanco}\end{array}$};
+\node at (0,0.75) {\footnotesize Región Interna};
+\node at (0,2.2) {\footnotesize Región Externa};
+\node at (-2.6,2.75) {\footnotesize 
+$\begin{array}{c}
+\mbox{electrón}\\
+\mbox{incidente}
+\end{array}$};
+\node at (2.7,1.25) {\footnotesize 
+$\begin{array}{c}
+\mbox{electrón}\\
+\mbox{dispersado}
+\end{array}$};
+\draw circle (1.75cm);
+\draw[fill=darkgray] circle (0.1cm);
+\draw[arrows=->,thick](-2.75,2.25)--(-1.5,1.4);
+\draw[arrows=->,thick](1.5,1.4)--(2.75,2.25);
+\end{tikzpicture}
+
 \end{column}
 \begin{column}{0.45\textwidth}  %%<--- here
 \begin{tikzpicture}[remember picture,overlay,
   arrow/.style={red,ultra thick,->,>=latex}]
-  \tikzset{shift={(current page.center)},xshift=2.9cm,yshift=2.25cm}
+  \tikzset{shift={(current page.center)},xshift=3.25cm,yshift=2.25cm}
   \node (target) {Estructura del blanco};
   \node (auto) at (target) [xshift=0cm,yshift=-0.65cm] {\fbox{\sc \small autostructure}};
 %
-  \node (inner) at (target) [xshift=0cm,yshift=-2.25cm] {Región interna};
+  \node (inner) at (target) [xshift=0cm,yshift=-2.25cm] {Región Interna};
   \node (rmatrxi) at (inner) [xshift=0cm,yshift=-0.65cm] {\fbox{\sc \small rmatrxi}};
 %
-  \node (outer) at (inner) [xshift=0cm,yshift=-2.25cm] {Región externa};
+  \node (outer) at (inner) [xshift=0cm,yshift=-2.25cm] {Región Externa};
   \node (stgf) at (outer) [xshift=0cm,yshift=-0.65cm] {\fbox{\sc \small stgf}};
 %
   \draw [arrow, bend right=0] (auto) to ([xshift=0cm,yshift=0cm]{inner.north});
@@ -337,12 +355,12 @@ alemendez@iafe.uba.ar}}
 \frametitle{Dependencia de CI ($N$)}
 
 \begin{tikzpicture}[remember picture,overlay]
-  \tikzset{shift={(current page.center)},xshift=1cm,yshift=-0.5cm}
+  \tikzset{shift={(current page.center)},xshift=1cm,yshift=-0.75cm}
   \node (be_config) 
   {\includegraphics[width=0.8\textwidth]{figures/rmatrix/example_conf.eps}};
   \node[draw,circle,minimum size=1cm,inner sep=0pt] (tag) at (be_config) 
-  [xshift=3.75cm,yshift=3.75cm] {Be};
-  \node (be_ecfgs) at (be_config) [xshift=-5.5cm,yshift=2cm]
+  [xshift=3.75cm,yshift=4cm] {Be};
+  \node (be_ecfgs) at (be_config) [xshift=-5.5cm,yshift=2.5cm]
   {\small$ 
     \begin{array}{l}
       1s^2 2s^2 \\
@@ -355,15 +373,15 @@ alemendez@iafe.uba.ar}}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-\frametitle{Dependencia de orbitales ($\lambda_{nl}$)}
+\frametitle{Dependencia de escaleo ($\lambda_{nl}$)}
 
 \begin{tikzpicture}[remember picture,overlay]
-  \tikzset{shift={(current page.center)},xshift=0cm,yshift=0cm}
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=-0.5cm}
   \node<1> (be_levels) 
   {\includegraphics[width=0.8\textwidth]{figures/rmatrix/Be_levels.eps}};
   \node[draw,circle,minimum size=1cm,inner sep=0pt] (tag) at (be_levels) 
-  [xshift=4.75cm,yshift=3.25cm] {Be};
-  \node<2-> (be_var) at (be_levels) [xshift=0cm,yshift=-0.5cm]
+  [xshift=4.75cm,yshift=3.75cm] {Be};
+  \node<2-> (be_var) at (be_levels) [xshift=0cm,yshift=-0.25cm]
   {\includegraphics[width=0.8\textwidth]{figures/rmatrix/example_var.eps}};
 \end{tikzpicture}
 
@@ -386,8 +404,8 @@ alemendez@iafe.uba.ar}}
   {Variación de parámetros};
   \node[expl1,text width=3.1cm] (diag) at (var) [xshift=2.5cm,yshift=-2cm]
   {Diagonalización};
-  \node[expl1,text width=3.3cm] (err) at (var) [xshift=-2.5cm,yshift=-2cm]
-  {Cálculo de error};
+  \node[expl1,text width=3.4cm] (err) at (var) [xshift=-2.5cm,yshift=-2cm]
+  {Cálculo de costo};
   \draw [arrow, bend right=0] 
   ([xshift=0cm,yshift=0cm]{defcfg}) to ([xshift=0cm,yshift=0cm]{var.north});
   \draw [arrow, bend right=-30] 
@@ -466,7 +484,7 @@ alemendez@iafe.uba.ar}}
   \node[expl1,text width=1.7cm,text height=0.1cm] (diag) at (var) [xshift=1.5cm,yshift=-0.8cm]
   {\tiny Diagonalización};
   \node[expl1,text width=2cm,text height=0.1cm] (err) at (var) [xshift=-1.5cm,yshift=-0.8cm]
-  {\tiny Cálculo de error};
+  {\tiny Cálculo de costo};
   \draw [arrow, bend right=0] 
   ([xshift=0cm,yshift=0cm]{inv}) to ([xshift=0cm,yshift=0cm]{rem.north});
   \draw [arrow, bend right=0] 
@@ -481,7 +499,6 @@ alemendez@iafe.uba.ar}}
   ([xshift=-0.75cm,yshift=0cm]{err.north}) to ([xshift=0cm,yshift=-0.25cm]{rem.west});
 \end{tikzpicture}
 
-
 \begin{tikzpicture}[remember picture, overlay,
   expl1/.style={draw=red,fill=orange!7,rounded corners,text width=3cm,
   minimum width=0.5cm, minimum height=0.1cm, text centered},
@@ -493,8 +510,8 @@ alemendez@iafe.uba.ar}}
   {\tiny Variación de parámetros};
   \node[expl1,text width=1.5cm] (diag) at (var) [xshift=1.3cm,yshift=-1cm]
   {\tiny Diagonalización};
-  \node[expl1,text width=1.7cm] (err) at (var) [xshift=-1.3cm,yshift=-1cm]
-  {\tiny Cálculo de error};
+  \node[expl1,text width=1.8cm] (err) at (var) [xshift=-1.3cm,yshift=-1cm]
+  {\tiny Cálculo de costo};
   \draw [arrow, bend right=0] 
   ([xshift=0cm,yshift=0cm]{defcfg}) to ([xshift=0cm,yshift=0cm]{var.north});
   \draw [arrow, bend right=-20] 
@@ -533,8 +550,6 @@ alemendez@iafe.uba.ar}}
   \node<8> (max5) {\includegraphics[width=\textwidth]{figures/gp/eval5/example.eps}};
   \node<9> (max6) {\includegraphics[width=\textwidth]{figures/gp/eval6/example.eps}};
   \node<10> (max7) {\includegraphics[width=\textwidth]{figures/gp/eval7/example.eps}};
-  \node<11> (max9) {\includegraphics[width=\textwidth]{figures/gp/eval8/example.eps}};
-  \node<12> (max10) {\includegraphics[width=\textwidth]{figures/gp/eval9/example.eps}};
 \end{tikzpicture}
 
 \end{frame}
