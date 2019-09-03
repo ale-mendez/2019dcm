@@ -1,23 +1,20 @@
 
-Falta:
-Diapositiva 1: Machine learning
-Diapositiva 10: Figura R-Matrix 
-==>> ((((rehacer la imagen de rmatrix sin boundary surface))))
-
 ########################################################################
 
 A principio de siglo, la física atómica supo estar a la vanguardia en 
-la implementación los métodos y herramientas computacionales 
-sofisticados tales como la computación en paralelo. Si uno revisaba 
+la implementación los métodos computacionales sofisticados tales como 
+la computación en paralelo. Si uno revisaba 
 la lista de proyectos en grandes centros computaciones tales como NERSC 
 podía encontrar siempre trabajos relacionados a la física atómica.
 
 Hoy en día la frontera computacional está dada por la inteligencia
 artificial y el machine learning. Todos aquí somos conscientes de los 
-grandes avances y desarrollos en este campo de la ciencia. 
-Una característica particular de la comunidad de ML es que es una 
-comunidad dinámica, de códigos compartidos, lo que hace que el estudio
-de los distintos métodos y su implementación sea amigable.
+grandes avances y desarrollos en esta área de la ciencia. 
+
+Una característica particular de la comunidad de ML que quizás ustedes 
+no sabían es que es una comunidad dinámica, abierta, de códigos 
+compartidos, lo que hace que el estudio de los distintos métodos y su 
+implementación sea amigable.
 
 La pregunta que nos hacemos nosotros es ¿podemos extraer estos 
 conocimientos e implementarlos en nuestro campo de trabajo? 
@@ -38,17 +35,17 @@ respectivo.
 
 ########################################################################
 
-El problema que generalmente resolvemos es: dado un potencial, 
-determinamos los autovalores y autovectores que describen al 
-sistema. 
+El problema que generalmente resolvemos es: 
+- a partir de un potencial conocido, determinamos las energías y 
+funciones de onda que describen al sistema. 
 
 El método de inversión depurada fue desarrollado con la premisa de 
-invertir este problema. Esto significa, dada las soluciones, conocer 
-el potencial que las genera. 
+invertir este problema. Esto significa, conociendo las soluciones del 
+problema, ¿cuál es el potencial que las genera?
 
 La inversión directa de esta ecuación nos permite determinar 
 potenciales orbitales efectivos dada cualquier solución. Nosotros 
-utilizamos soluciones de Hartree-Fock.
+implementamos la inversión utilizando soluciones de Hartree-Fock.
 
 Los potenciales que encontramos tienen una forma coulombiana, por lo 
 que es conveniente describirlos a través de una carga efectiva. 
@@ -61,22 +58,27 @@ a el apantallamiento electrónico, la carga es igual a 1.
 Sin embargo, a pesar de que inversión es directa, las cargas efectivas
 invertidas presentan serios problemas numéricos. 
 
-Los nodos de las funciones de onda, como por ejemplo el del orbital 
-2s del Kr, se traslada en la carga efectiva como un polo debido a la
-función de onda en el denominador.
+Uno de los problemas son los nodos de las funciones de onda, como por
+ejemplo el nodo del orbital 2s del Kr. Debido a la función de onda en 
+el denominado, la inversión traslada el nodo hacia la carga efectiva 
+como un polo 
 
-De la misma manera, debido al decaimiento exponencial de los orbitales
-la carga invertida diverge lejos del núcleo. 
+De la misma manera, el decaimiento exponencial de los orbitales resulta
+en la divergencia de la carga invertida lejos del núcleo. 
 
 ########################################################################
 
 Para lidear con estos problemas, planteamos un esquema de depuración.
-El orbital 2s de N muestra los mismos problemas que les comentaba recién: 
-polo y divergencia. El método consiste en remover las regiones en las 
-que la carga tiene comportamientos no físicos e imponer las correctas 
-condiciones asintóticas a través de una función analítica paramétrica. 
-Luego, los parámetros se ajustan de manera tal que las soluciones de 
-dicha carga, dicho potencial, reproduzcan las originales. 
+El orbital 2s de N muestra los mismos problemas que el ejemplo anterior: 
+polo y divergencia. 
+
+El método consiste en remover las regiones en las que la carga tiene 
+comportamientos no físicos, imponiendo las correctas condiciones 
+asintóticas a través de una función analítica paramétrica. 
+
+Luego, los parámetros que definen la carga se ajustan de manera tal que 
+las soluciones de dicha carga, es decir los energías y valores medios
+radiales, reproduzcan las originales. 
 
 ########################################################################
 
@@ -94,48 +96,48 @@ de onda.
 determinada por los errores relativos entre los valores originales y 
 las soluciones obtenidas. 
 - Si el error es muy grande, volvemos a variar los parámetros y el 
-proceso se repite. Se evalua la dirección de variación de cada uno de 
-los parámetros de manera que se minimice el costo y el proceso se 
-repite.
+proceso se repite. La dirección de variación de cada uno de los parámetros 
+se hace de forma manual tal que se minimice el costo.
 
 En muchos casos ocurre que la región sobre la cual ajustamos la función 
-analítica del potencial no es la apropiada y tenemos que volver a 
-definir una nueva región, ampliando o reduciendo las zonas 
-anteriormente definidas. Y el proceso vuelve a empezar. 
+analítica del potencial no es la apropiada y tenemos redefinir esta 
+región. Y el proceso vuelve a empezar. 
+
 
 Como se habrán dado cuenta este procedimiento es terriblemente no 
-sistematizable. Por otro lado, tanto la definición de las zonas ha ser
-removidas como la dirección de variación de los parámetros en el 
-hiperespacio de parámetros requiere experiencia y esta experiencia no 
-es transmitible. Uno podría decir que este procedimiento es hasta 
-cierto punto artesanal, a una persona le sale y a otra no.
+sistematizable: 
+- tanto la definición de las zonas ha ser removidas 
+- como la dirección de variación de los parámetros en el hiperespacio 
+de parámetros 
+requiere experiencia y esta experiencia no es transmitible. Uno podría 
+decir que este procedimiento es hasta cierto punto artesanal, a una 
+persona le sale y a otra no.
 
 ########################################################################
 
-El segundo problema tiene que ver directamente con los cálculos 
-colisionales. Particularmente con el cálculo de secciones eficaces de 
-excitación por impacto de electrón.
+El segundo problema tiene que ver directamente con procesos colisionales. 
+Particularmente con el cálculo de secciones eficaces de excitación por 
+impacto de electrón.
 
 ########################################################################
 
-No voy a explicar R-Matrix, no solo porque no tengo tiempo sino porque
-no es el punto de mi charla. Sólo voy a destacar, y creo que todos y 
-todas lo sabemos, es que R-Matrix es un método sofisticado que 
-constituye el estado del arte. 
+Este cálculo lo hacemos con el método de R-Matrix. No voy a explicar
+aquí el método. Sólo voy a destacar, y creo que todos y todas lo sabemos, 
+es que R-Matrix es un método sofisticado que constituye el estado del 
+arte. 
 
-El cálculo de excitación por impacto de electrón se realiza con una 
-suite de programas, todos paralelizados, que demanda recursos 
-computacionales significativos. 
+El método se implementa utilizando una suite de programas, todos 
+paralelizados, los cuales demandan significativos recursos computacionales.
 
 Para iniciar el calculo es necesario describir de forma correcta el 
 blanco.
 
 Luego, se resuelve lo que se conoce como la región interna, en donde se
 considera la interacción entre el electrón incidente y el blanco, 
-exchange y polarización.
+exchange y correlación entre el electrón incidente y el target.
 
-Y finalmente se resuelve la región externa donde sólo se toman en 
-cuenta los potenciales de largo alcance. 
+Finalmente se resuelve la región externa donde sólo se toman en cuenta 
+los potenciales de largo alcance. 
 
 El cálculo de secciones eficaces utilizando este método puede llevar
 meses, desde la preparación del blanco hasta la correcta obtención de 
@@ -146,20 +148,22 @@ convergencia en el cálculo propiamente dicho.
 Sin lugar a dudas, una de las partes más difíciles del cálculo está
 dado por la descripción del blanco. 
 
-En general, los estados del átomo o ión son descritos como una 
-combinación lineal de estados base a partir del método de interacción 
-de configuraciones (configuration interaction). La expansión CI 
-considera N configuraciones definidas a priori. N no es sólo el número
-de configuraciones a considerar sino el tipo de configuraciones que
-aportan a la interacción de configuraciones. La selección de las 
-configuraciones requiere conocimiento de la física asociada a los 
-blancos.
+En general, los estados del blanco son descritos como una combinación 
+lineal de estados usando el método de interacción de configuraciones 
+(configuration interaction). 
+
+La expansión CI considera N configuraciones definidas a priori, donde 
+N no es sólo el número de configuraciones a considerar sino el tipo de 
+configuraciones que aportan a la interacción de configuraciones. 
+La selección de las configuraciones requiere conocimiento de la física 
+asociada a los blancos.
 
 Las funciones que componen esta combinación están dados a su vez por 
 funciones radiales bases que se obtienen como solución de potenciales
-modelo. Los potenciales modelo pueden ser tipo TFDA o STOs. Estos 
-potenciales en general dependen de parámetros de escaleo que permiten 
-hacer ciertos ajustes en el modelo atómico.
+modelo. Estos potenciales modelo pueden ser tipo TFDA o STOs. 
+
+Los potenciales modelo en general dependen de parámetros de escaleo que 
+permiten hacer ciertos ajustes en el modelo atómico. 
 
 Ahora, ¿que tan fuerte es la dependencia de la estructura atómica de
 estos parámetros? Veamos un ejemplo.
@@ -167,17 +171,16 @@ estos parámetros? Veamos un ejemplo.
 ########################################################################
 
 El átomo de Be es entre otros de los átomos más dificiles de describir. 
-Se han realizado y se realizan grandes esfuerzos para describir las 
-transiciones con mayor precisión. Debido a su gran complejidad elegimos 
-este caso para estudiar la dependencia de la estructura atómica a los
-distintos parámetros.
+En general, los átomos neutrales representan un desafío para el método.
+Se han realizado y se realizan grandes esfuerzos para describir las
+transiciones de este tipo de blanco con la mayor precisión posible. 
 
-En este caso, tenemos la transición prohibida del 
-electrón 2s de su estado fundamental al estado excitado 3p 3P. 
-La dependencia del número y tipo de configuraciones electrónicas en la 
-expansión CI es crítica. El perfil de la sección eficaz cambia a lo 
-largo de todo el rango de bajas energías, desde el umbral hasta 10 veces 
-su valor. 
+En este caso, tenemos la transición prohibida del electrón 2s de su 
+estado fundamental al estado excitado 3p 3P. La dependencia del número 
+y tipo de configuraciones electrónicas en la expansión CI es crítica. 
+El perfil de la sección eficaz cambia a lo largo de todo el rango de 
+bajas energías tanto por debajo como por arriba de la energía de 
+ionización (IE=9.3eV).
 
 De manera que considerar las correctas configuraciones es esencial en 
 el cálculo de las secciones eficaces.
@@ -187,10 +190,13 @@ el cálculo de las secciones eficaces.
 Por otro lado, dado un conjunto de configuraciones, los parámetros de 
 escaleo que definen los potenciales modelos nos permiten mover el 
 espectro de energías para que éstos se corresponda a los valores 
-experimentales. De manera que estos parámetros, que pueden llegar a 
-ser varias decenas, se van variando de forma iterativa hasta que se 
-minimiza un costo definido a partir de la error relativo entre los 
-valores de energía calculados y los deseados. 
+experimentales. A medida que aumentamos el número de configuraciones
+en el CI, el número de parámetros lambda crece, pudiendo este llegar 
+a varias decenas.
+
+Los parámetros del potencial se van variando de forma iterativa hasta 
+que se minimiza un costo definido a partir de la error relativo entre 
+los valores de energía calculados y los deseados. 
 
 La dependencia de las secciones eficaces respecto a estos parámetros
 se puede observar en esta transición permitida. 
@@ -204,22 +210,25 @@ como convergent close cloupling.
 
 ########################################################################
 
-Finalmente, el procedimiento consiste en definir un conjunto de 
+En definitiva, el procedimiento consiste en fijar un conjunto de 
 configuraciones electrónicas. Este conjunto debe estar definido 
 correctamente, no tiene sólo que ver con la cantidad de configuraciones,
-sino con el tipo de configuraciones. 
+sino con debe considerar efectivamente las configuraciones que 
+contribuyan al CI. 
 
 El conjunto definido determina un número de orbitales base, los cuales
-dependen a través de potenciales modelos, de parámetros de escaleo.
-Estos parámetros se fijan, se calculan los niveles de energía, los 
-cuales se comparan con valores experimentales, se calcula el costo. 
-Y se itera nuevamente. Si hay convergencia en el cálculo, y para 
-corroborar que las secciones eficaces estén bien descritas, se introduce
-la estructura obtenida en R-Matrix. Dependiendo del problema, cada 
-cálculo de R-Matrix puede llevar hasta 3 días con 81 procesadores. 
-Si las secciones eficaces no están bien descritas la definición de la 
-configuración electrónica no es la correcta y el procedimiento vuelve a 
-empezar.
+dependen de parámetros de escaleo a través de potenciales modelos.
+Estos parámetros permiten ajustar los niveles de energía con 
+valores experimentales, minimizando un costo. Este proceso se realiza 
+de forma iterativa. 
+
+Para corroborar que las secciones eficaces estén bien descritas, se 
+introduce la estructura obtenida en el cálculo de R-Matrix. 
+Dependiendo del problema, cada cálculo de R-Matrix puede llevar varios
+días de cálculo. (3 días con 81 procesadores = 2K horas)
+
+Si las secciones eficaces no están bien descritas la descripción del 
+blanco no es la correcta y el procedimiento vuelve a empezar.
 
 ########################################################################
 
@@ -230,7 +239,9 @@ valores conocidos y valores calculados que definidos por parámetros.
 En el caso del DIM, los parámetros de las cargas efectivas y en el caso 
 del blanco de R-Matrix de las configuraciones y los parámetros de escaleo.
 - Segundo, ambos problemas no representan un problema ordinario de 
-minimización. ¿Por qué?
+minimización. 
+
+¿Por qué?
 1) Principalmente porque no existe una función analítica a minimizar. De 
 manera que es imposible implementar métodos que requieren la derivada, 
 tales como gradient descent.
@@ -258,7 +269,6 @@ con un ejemplo.
 
 ########################################################################
 
-Diapo 1:
 Los procesos gaussianos están definidos por tres partes fundamentales.
 El primero es el conocimiento previo o prior. Con este prior construimos
 la segunda parte fundamental, que es la media y la incerteza de la 
@@ -266,33 +276,35 @@ distribución de la función.
 En principio, no sabemos nada de la función, de manera que la media es 
 cero y la incerteza sobre la función es homogénea. 
 
-Diapo 2:
 Si evaluamos la función en un punto, este nuevo punto constituye ahora 
 nuestro conocimiento previo. Así, los procesos gaussianos definen una 
 nueva media y una nueva distribución de la incerteza de la función. 
 
-Diapo 3:
 El tercer elemento de los procesos gaussianos es la función de 
 adquisición. Existen distintos tipos de funciones de adquisición, sin
 embargo todas ellas definen el nivel de exploración/explotación del 
 modelo. Es decir, si el modelo va a explorar en regiones de espacio
 donde hay mucha incerteza o si va a explotar la regiones en donde 
-encontró un mínimo. El máximo de la función de adquisición nos indica 
-el próximo punto a evaluar. 
-En general, los primeros puntos a evaluar están dados por las regiones
-de mayor incerteza del modelo.
+hay probabilidad de que haya un mínimo. 
 
-Diapo 4:
-En este caso, las regiones con mayor incerteza estan en los extremos 
-del espacio definido. 
+En este caso, queremos encontrar el extremo máximo de la función.
+A diferencia de los casos anteriores, donde necesito minimizar la 
+función de costo. Pero el problema es equivalente.
 
-Diapo 5:
-A medida que incorporamos una nueva evaluación, el modelo se actualiza 
-y la media e incerteza de la función, así como la función de 
-adquisición cambia.
+El máximo de la función de adquisición nos indica el próximo punto a 
+evaluar. En general, los primeros puntos a evaluar están dados por las 
+regiones de mayor incerteza del modelo.
 
-Diapo 6 y siguientes:
-Llega un punto en el que el modelo encuentra un mínimo 
+Como verán, a medida que voy evaluando la función e incorporando 
+datos a mi modelo, la función media y la incerteza del modelo cambia y 
+esta se ajusta cada vez más a la función verdadera.
+
+En este punto, el modelo ya encontró un máximo. Sin embargo, hay regiones
+en las que todavía tiene suficiente incerteza para que el modelo requiera
+explorar en esas zonas.
+
+Finalmente, el modelo encontró la zona del máximo de la función y 
+explota esa zona en busca del verdadero máximo.
 
 ########################################################################
 

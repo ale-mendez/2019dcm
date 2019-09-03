@@ -70,13 +70,43 @@ alemendez@iafe.uba.ar}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Machine Learning}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framepic[1.]{figures/mlcover_modif.png}{
- \begin{textblock}{8}(6.5,-2.2)
-    {\color{orange0}
-\text{\huge \bf Machine} \\
-\vspace{2pt}
-\text{\huge\bf Learning}}
- \end{textblock}}
+\framepic[1.]{figures/ml/80c.png}{
+ \begin{textblock}{8}(2.5,3.75)
+    \text{\color{darkgray}{\huge \bf Machine Learning}}
+\end{textblock}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{frame}
+
+%\begin{tikzpicture}[remember picture, overlay]
+%\tikzset{shift={(current page.center)},xshift=0cm,yshift=0cm}
+%\node at (0,0) % classification
+%{\includegraphics[width=0.2\textwidth]{figures/ml/7qx.jpg}};
+%\node at (2,1) % reinforcement
+%{\includegraphics[width=0.2\textwidth]{figures/ml/7r2.jpg}};
+%\node at (-2.2,1) % neural
+%{\includegraphics[width=0.2\textwidth]{figures/ml/7r4.jpg}};
+%%\node at (-1.5,-1)
+%%{\includegraphics[width=0.15\textwidth]{figures/ml/7vx.jpg}};
+%\node at (3,-1.25) % regression
+%{\includegraphics[width=0.35\textwidth]{figures/ml/7w5.jpg}};
+%\node at (-3.25,-2.5) % multilayer
+%{\includegraphics[width=0.4\textwidth]{figures/ml/7wg.jpg}};
+%\node at (1.5,-3.5) % recurrent
+%{\includegraphics[width=0.4\textwidth]{figures/ml/7wk.jpg}};
+%\node at (4.2,1.5) % clustering
+%{\includegraphics[width=0.2\textwidth]{figures/ml/7qz.jpg}};
+%\node at (-4.5,0.25) % ensemble
+%{\includegraphics[width=0.2\textwidth]{figures/ml/7r3.jpg}};
+%\node at (-4,3) %bayes
+%{\includegraphics[width=0.3\textwidth]{figures/ml/7w2.jpg}};
+%\node at (0,3.1) %stacking
+%{\includegraphics[width=0.3\textwidth]{figures/ml/7wb.jpg}};
+%\node at (4,3.5) % convolution neural network
+%{\includegraphics[width=0.4\textwidth]{figures/ml/7wj.jpg}};
+%\end{tikzpicture}
+
+%\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{DIM}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -89,31 +119,6 @@ alemendez@iafe.uba.ar}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
 \frametitle{Método de Inversión Depurada (DIM)}
-
-%\vspace{-2cm}
-%\begin{equation*}
-%\tikzmarkin[draw=darkgray,fill=darkgray!10]{potencial}(0.2,-0.3)(-0.1,0.65)
-%T_{fi} = \big| \langle \psi_f |  V 
-%| \psi_i \rangle \big|^2 
-%\tikzmarkend{potencial}
-%\end{equation*}
-
-%\begin{tikzpicture}[remember picture, overlay,
-%  expl1/.style={draw=red,fill=orange!7,rounded corners,text width=2.5cm,
-%  minimum width=1.2cm, minimum height=0.7cm, text centered},
-%  arrow/.style={red,ultra thick,->,>=latex}
-%  ]
-%\node<2->[expl1] (potexp) at (9.5cm,2cm) {\color{red}{¿Cómo obtener V?}};
-%\draw<2->[arrow, bend right=30, dashed] ([xshift=0cm,yshift=0cm]{potexp.west}) to
-%         ([xshift=2.5cm,yshift=-0.2cm]{potencial});  
-%\node<3-> (schro) at (5cm,-1cm)
-%{$ \left[ -\frac{1}{2} \frac{d^2}{d r^2} + \frac{l(l+1)}{2 r^2} 
-%+ {\color{red}V_{nl}(r)} \right] \, P_{nl}(r) = 
-%E_{nl} \, P_{nl}(r) $};
-%\node<4> (znl) at (5cm,-2.5cm)
-%{${\color{red}V_{nl}(r)}=\frac{1}{2}\frac{P_{nl}''(r)}{P_{nl}(r)}-\frac{l(l+1)}{2 r^2}
-%+E_{nl}$};
-%\end{tikzpicture}
 
 \begin{tikzpicture}[remember picture, overlay]
   \tikzset{shift={(current page.center)},xshift=0cm,yshift=2.4cm}
@@ -301,52 +306,69 @@ $\begin{array}{c}
 \frametitle{Descripción del blanco}
 
 \begin{tikzpicture}[remember picture,overlay,
+  expl1/.style={draw=red,rounded corners,text width=0.15cm,
+  minimum width=0.2, minimum height=0.4cm, text centered},
+  expl2/.style={draw=red,rounded corners,text width=0.35cm,
+  minimum width=0.25, minimum height=0.6cm, text centered},
   arrow/.style={red,ultra thick,->,>=latex}]
   \tikzset{shift={(current page.center)},xshift=0cm,yshift=1.5cm}
   \node (eqCI) 
   {\begin{minipage}{0.50\textwidth}
      \begin{equation*}
        \Psi_i(\mathbf{r}) =
-       \sum_j^{\tikzmarkin[draw=orange,fill=orange!10]{N}(0.1,-0.1)(-0.1,0.33)
-        N
-       \tikzmarkend{N}}
-       c_{ji} \, \Phi_j(\mathbf{r})
+       \sum_j^{N} c_{ji} \, \Phi_j(\mathbf{r})
      \end{equation*}
    \end{minipage}};
-%  \node (name) at (eqCI) [xshift=4.35cm,yshift=-0.2cm]
-%  {$\begin{array}{c}
-%     \mbox{\small\it Configuration} \\
-%     \mbox{\small\it interaction}
-%   \end{array}$};
-  \node (nconf) at (eqCI) [xshift=3.cm,yshift=1cm]
-  {\small\it Configuraciones};
-  \draw [arrow, bend right=-30] 
-  ([xshift=0.2cm,yshift=0cm]{N.east}) to ([xshift=0.1cm,yshift=0.1cm]{nconf.west});
-%%
-  \node (pnl) at (eqCI) [xshift=-2.35cm,yshift=-2.25cm]
+  \node<2-> (eqCI) 
+  {\begin{minipage}{0.50\textwidth}
+     \begin{equation*}
+       \Psi_i(\mathbf{r}) =
+       \sum_j^{\color{red}{N}} c_{ji} \, \Phi_j(\mathbf{r})
+     \end{equation*}
+   \end{minipage}};
+  \node<2->[expl1] (N) at (eqCI) [xshift=0.05cm,yshift=0.4cm] {\,};
+  \node<2-> (nconf) at (eqCI) [xshift=3.cm,yshift=1cm] {\small\it Configuraciones};
+  \draw<2-> [arrow, bend right=-30] 
+  ([xshift=0.175cm,yshift=-0.05cm]{N.north}) to ([xshift=0.1cm,yshift=0.1cm]{nconf.west});
+%% Pnl
+  \node<3-> (pnl) at (eqCI) [xshift=-2.35cm,yshift=-2.25cm]
    {\begin{minipage}{0.50\textwidth}
      \begin{equation*}
        \left[ \frac{1}{2} \frac{d^2}{dr^2} - \frac{l(l+1)}{2r^2} 
-     + {\color{red}V_{nl}^{\mbox{\scriptsize eff}}(
-{\tikzmarkin[draw=orange,fill=orange!10]{lam}(0.0,-0.2)(-0.05,0.42)
-\lambda_{nl}
-\tikzmarkend{lam}},r)}
+     + V_{nl}^{\mbox{\scriptsize eff}}(\lambda_{nl},r)
  + E_{nl} \right] 
      P_{nl}(r)=0
      \end{equation*}
    \end{minipage}};
-  \node (param) at (pnl) [xshift=6cm,yshift=1cm]
-  {\small\it Parámetro de escaleo};
-  \draw [arrow, bend right=-40] 
-  ([xshift=0.2cm,yshift=0cm]{lam.east}) to ([xshift=0.1cm,yshift=0.cm]{param.west});
-%%
-  \node (pot) at (pnl) [xshift=2.5cm,yshift=-2.2cm]
+  \node<4-> (pnl) at (eqCI) [xshift=-2.35cm,yshift=-2.25cm]
+   {\begin{minipage}{0.50\textwidth}
+     \begin{equation*}
+       \left[ \frac{1}{2} \frac{d^2}{dr^2} - \frac{l(l+1)}{2r^2} 
+     + {\color{red}V_{nl}^{\mbox{\scriptsize eff}}(\lambda_{nl},r)}
+ + E_{nl} \right] 
+     P_{nl}(r)=0
+     \end{equation*}
+   \end{minipage}};
+  \node<4-> (pot) at (pnl) [xshift=2.5cm,yshift=-2.2cm]
   {{\begin{varwidth}{\linewidth}
      \begin{itemize}
         \itemb Thomas–Fermi–Dirac–Amaldi 
         \itemb Slater-Type-Orbital de Burgess  
      \end{itemize}
     \end{varwidth}}}; 
+  \node<5-> (pnl) at (eqCI) [xshift=-2.35cm,yshift=-2.25cm]
+   {\begin{minipage}{0.50\textwidth}
+     \begin{equation*}
+       \left[ \frac{1}{2} \frac{d^2}{dr^2} - \frac{l(l+1)}{2r^2} 
+     + {\color{red}V_{nl}^{\mbox{\scriptsize eff}}(\lambda_{nl},r)}
+ + E_{nl} \right] 
+     P_{nl}(r)=0
+     \end{equation*}
+   \end{minipage}};
+  \node<5->[expl2] (lam) at (pnl) [xshift=2.75cm,yshift=-0.275cm] {\,};
+  \node<5-> (param) at (pnl) [xshift=6cm,yshift=1cm] {\small\it Parámetro de escaleo};
+  \draw<5-> [arrow, bend right=-40] 
+  ([xshift=0.15cm,yshift=-0.01cm]{lam.north}) to ([xshift=0.1cm,yshift=0.cm]{param.west});
 \end{tikzpicture}
 
 \end{frame}
@@ -672,5 +694,11 @@ utilizar en otros problemas del área
 \end{itemize}
 
 \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\framepic[1.]{figures/mlcover_modif.png}{
+ \begin{textblock}{8}(6.,-1.5)
+    {\color{orange0} 
+\text{\huge \bf Gracias.} }
+ \end{textblock}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

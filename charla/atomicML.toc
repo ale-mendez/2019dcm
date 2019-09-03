@@ -1,6 +1,7 @@
-\babel@toc {spanish}{}
+\beamer@endinputifotherversion {3.24pt}
+\select@language {spanish}
 \beamer@sectionintoc {1}{Machine Learning}{2}{0}{1}
 \beamer@sectionintoc {2}{DIM}{3}{0}{2}
 \beamer@sectionintoc {3}{R--Matrix}{17}{0}{3}
-\beamer@sectionintoc {4}{Procesos Gaussianos}{25}{0}{4}
-\beamer@sectionintoc {5}{Resultados}{36}{0}{5}
+\beamer@sectionintoc {4}{Procesos Gaussianos}{29}{0}{4}
+\beamer@sectionintoc {5}{Resultados}{40}{0}{5}

@@ -156,7 +156,8 @@
     \usebackgroundtemplate{%
     \tikz[overlay,remember picture]
       \node[opacity=#1, at=(current page.center)]{
-      \includegraphics[height=1.0\paperheight]{#2}};
+      \includegraphics[width=1.0\paperwidth,%height=1.0\paperheight,
+]{#2}};
     }
     \begin{frame}
     #3
