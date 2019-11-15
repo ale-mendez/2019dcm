@@ -460,7 +460,7 @@ $\begin{array}{c}
   \node (exppar) at (Jfunc) [xshift=0cm,yshift=-3cm]
   {\begin{minipage}{\textwidth}
       \begin{itemize}
-      \itemb DIM: $\boldsymbol{\xi}=\{\boldsymbol{\alpha},\boldsymbol{\beta} \}$
+      \itemb DIM: $\boldsymbol{\xi}=\{\mathbf{R},\boldsymbol{\alpha},\boldsymbol{\beta} \}$
       \itemb R--Matrix: $\boldsymbol{\xi}=\{N,\boldsymbol{\lambda} \}$
       \end{itemize}
    \end{minipage}};
@@ -485,7 +485,7 @@ $\begin{array}{c}
   \node (exppar) at (Jfunc) [xshift=0.75cm,yshift=-3cm]
   {\begin{minipage}{0.7\textwidth}
       \begin{itemize}
-      \itemb DIM: $\boldsymbol{\xi}=\{\boldsymbol{\alpha},\boldsymbol{\beta} \}$
+      \itemb DIM: $\boldsymbol{\xi}=\{\mathbf{R},\boldsymbol{\alpha},\boldsymbol{\beta} \}$
       \itemb R--Matrix: $\boldsymbol{\xi}=\{N,\boldsymbol{\lambda} \}$
       \end{itemize}
    \end{minipage}};
@@ -694,10 +694,15 @@ utilizar en otros problemas del área
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\framepic[1.]{figures/mlcover_modif.png}{
- \begin{textblock}{8}(6.,-1.5)
-    {\color{orange0} 
-\text{\huge \bf Gracias.} }
- \end{textblock}}
+
+\begin{frame}
+\begin{tikzpicture}[overlay,remember picture]
+  \tikzset{shift={(current page.center)},xshift=0cm,yshift=0cm}
+  \node (fig)
+{\includegraphics[height=1.05\paperheight,]{figures/mlcover_modif.png}};
+  \node at (fig) [xshift=2.8cm,yshift=2.7cm] {{\color{orange0} \text{\huge \bf Gracias.}}};
+\end{tikzpicture}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}

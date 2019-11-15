@@ -1,5 +1,4 @@
-\beamer@endinputifotherversion {3.24pt}
-\select@language {spanish}
+\babel@toc {spanish}{}
 \beamer@sectionintoc {1}{Machine Learning}{2}{0}{1}
 \beamer@sectionintoc {2}{DIM}{3}{0}{2}
 \beamer@sectionintoc {3}{R--Matrix}{17}{0}{3}
